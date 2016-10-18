@@ -1,0 +1,50 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case">
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+				<nav>
+					<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+					<apex:define name="login-proposition">
+						<c:HAS_Community_Proposition />
+					</apex:define>
+				</nav>
+    		</apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <div class="grid-row">
+        		<div class="column-two-thirds">
+                    <apex:outputPanel layout="block" styleClass="inner">
+                        <apex:outputPanel layout="block" id="content" styleClass="home">
+
+        	                <h1 class="heading-medium">
+        	                    <apex:outputText value="{!$Label.HAS_Form_Page_22_Title}" />
+        	                </h1>
+
+        					<p class="heading-lede">
+        	                    <apex:outputText value="{!$Label.HAS_Form_Page_22_lede}" />
+        	                </p>
+
+        					<p>
+        						<apex:outputText value="{!$Label.HAS_Form_Page_22_Text}"  escape="false"/>
+        					</p>
+
+        					<br />
+        	                <p>
+        						<a class="button clrButton" href="{!$Label.HAS_Nomination_Complete_URL}">{!$Label.HAS_Nomination_Complete_Copy}</a>
+        					</p>
+
+                    	</apex:outputPanel>
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

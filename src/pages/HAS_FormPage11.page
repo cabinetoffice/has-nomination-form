@@ -1,0 +1,87 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationPostsExtension">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+    <apex:composition template="{!$Site.Template}">
+		<!-- Posts the Nominee has held -->
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+	            <apex:outputPanel layout="block" styleClass="inner">
+	                <apex:outputPanel layout="block" id="content" styleClass="home">
+	                    <apex:form styleClass="main">
+
+	                    <h1 class="heading-medium">
+	                        <apex:outputText value="{!$Label.HAS_Form_Page_11_Title}" />
+	                    </h1>
+
+	                    <p>
+	                        <apex:outputText value="{!$Label.HAS_Posts_Page_Text}" escape="false"/>
+	                    </p>
+
+	                    <apex:outputPanel styleClass="form-group" layout="block">
+	                      <apex:commandLink value="{!$Label.HAS_Add_A_Post}" action="{!openPostForm}" rendered="{!!readOnlyMode}"/>
+	                    </apex:outputPanel>
+
+						<apex:outputPanel rendered="{!!posts.empty}">
+	                        <apex:dataTable value="{!posts}" var="post" id="postsTable" styleClass="clrDataTable">
+	                            <apex:repeat value="{!$ObjectType.Post__c.FieldSets.Posts}" var="field">
+	                                <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!post[field]}" headerClass="" />
+	                            </apex:repeat>
+	                            <apex:column >
+	                                  <apex:commandLink action="{!editRecord}" value="{!$Label.HAS_Edit_Label}" id="editPost" immediate="TRUE" rendered="{!!readOnlyMode}">
+	                                    <apex:param name="editPostId" assignTo="{!postId}" value="{!post.Id}" />
+	                                  </apex:commandLink>
+	                                  <br />
+	                                 <apex:commandLink action="{!deleteRecord}" value="{!$Label.HAS_Delete_Label}" id="deletePost" immediate="TRUE" rendered="{!!readOnlyMode}">
+	                                    <apex:param name="delPostId" assignTo="{!postId}" value="{!post.Id}" />
+	                                </apex:commandLink>
+	                            </apex:column>
+	                        </apex:dataTable>
+						</apex:outputPanel>
+
+	                      <br />
+
+	                        <apex:outputPanel styleClass="formGroup" layout="block">
+	                           <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep11" rendered="{!!readOnlyMode}" />
+	                            <br />
+	                            <br />
+	                            <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep11" immediate="TRUE" />
+	                        </apex:outputPanel>
+
+	                    </apex:form>
+	                </apex:outputPanel>
+	            </apex:outputPanel>
+	            <script type="text/javascript" charset="utf-8">
+
+	                jQuery(document).ready(function($)
+	                {
+	                    $("[makeReadOnly='true']").attr('disabled', 'disabled');
+	                });
+	            </script>
+			</div>
+		</div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

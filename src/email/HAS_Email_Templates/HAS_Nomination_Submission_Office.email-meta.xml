@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Details of a completed nomination sent to the HAS Office</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>HAS Nomination Submission - Office</name>
+    <style>none</style>
+    <subject>Honours nomination web form submitted for {!Case.Nominee_Name__c}</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+<apex:component >
+	<apex:attribute name="progressSteps" description="The steps applicable for the progress section" type="String[]" required="true" />
+	<apex:attribute name="activeStep" description="The active step - this is a zero based array" type="Integer" required="true" />
+
+	<section class="intro">
+		<nav class="progress-indicator group" role="navigation">
+			<ol>
+				<apex:repeat value="{!progressSteps}" var="step" >
+					<li class="{!IF(step == progressSteps[activeStep],'active','')}" >
+						{!step}
+					</li>
+				</apex:repeat>
+			</ol>
+		</nav>
+	</section>
+</apex:component>

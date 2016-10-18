@@ -1,0 +1,7 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_HAS_PageDispatcher" action="{!Redirect}">
+
+    <c:HAS_Page_Messages />
+    {!Nomination.Progress__c}<br />
+    {!ConfigurationErrorMessage}
+
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page contentType="text/plain">
+#
+# robots.txt for sfdc appservers.
+#
+# For use by salesforce.com
+#
+User-agent: *    # applies to all robots
+Disallow: /      # disallow indexing of all pages
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:component >
+    <apex:attribute name="formPDLabel" description="The forms Progresive Disclosure Label " type="String" required="true" />
+    <apex:attribute name="formPDText" description="The forms Progresive Disclosure text " type="String" required="true" />
+
+    <apex:outputPanel rendered="{!AND( formPDLabel !='', formPDText != '' )}" >
+        <details>
+            <summary><span class="summary">{!formPDLabel}</span></summary>
+            <apex:outputPanel layout="block" styleClass="panel-indent">
+                <apex:outputText value="{!formPDText}" escape="false" />
+            </apex:outputPanel>
+        </details>
+    </apex:outputPanel>
+</apex:component>

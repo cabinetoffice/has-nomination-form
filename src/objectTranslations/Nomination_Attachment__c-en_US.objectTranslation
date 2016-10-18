@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nomination Attachment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Nomination Attachments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Attachment Id --></label>
+        <name>Attachment_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment Type --></label>
+        <name>Attachment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Evidence</masterLabel>
+            <translation><!-- Evidence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supporting letter</masterLabel>
+            <translation><!-- Supporting letter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Attachment Url --></label>
+        <name>Attachment_Url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nomination --></label>
+        <name>Nomination__c</name>
+        <relationshipLabel><!-- Nomination Attachments --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

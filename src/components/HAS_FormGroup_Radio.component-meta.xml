@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>31.0</apiVersion>
+    <description>UI for when we need to format Picklists as Radio buttons with styles that work with GDS guidelines.</description>
+    <label>HAS_FormGroup_Radio</label>
+</ApexComponent>

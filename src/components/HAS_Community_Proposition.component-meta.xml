@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>31.0</apiVersion>
+    <description>For adding the logout navigation to the header once logged in to the community</description>
+    <label>HAS_Community_Proposition</label>
+</ApexComponent>

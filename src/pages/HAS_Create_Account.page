@@ -1,0 +1,77 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="User" extensions="bg_CommunitiesSelfRegController">
+     <apex:composition template="{!$Site.Template}">
+     <apex:define name="title">
+         <title>{!$Label.HAS_Label}</title>
+     </apex:define>
+
+     <apex:define name="header-proposition">
+         <nav>
+             <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+         </nav>
+     </apex:define>
+
+        <apex:define name="pageErrors">
+            <apex:pageMessages escape="false" />
+        </apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><a href="{!$Label.HAS_Login_Page}">{!$Label.HAS_Login_Label}</a></li>
+               <li><strong>{!$Label.HAS_Create_Account}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageHeader" >
+            <c:HAS_Page_Header header="{!$Label.HAS_Create_Account_Header}" strapline="{!$Label.HAS_Create_Account_Strapline}" paragraph="" />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:form id="createAccountForm" >
+                <apex:outputPanel layout="block" styleClass="inner">
+                    <apex:outputPanel layout="block" id="content" styleClass="home" >
+                            <apex:outputPanel id="userDetailsPanel" layout="block" >
+                                 <apex:outputPanel id="userDetailsInputPanel" layout="block" >
+                                    <apex:outputPanel layout="block" styleClass="form-group">
+                                        <h2 class="heading-large">{!$Label.HAS_Your_Details_Label}</h2>
+                                        <apex:outputPanel rendered="{!SUBSTITUTE($Label.HAS_Your_Details_Help_Text, '[ignore]', '') != ''}">
+                                            <p class="text-secondary">
+                                                <apex:outputText value="{!SUBSTITUTE($Label.HAS_Your_Details_Help_Text, '[ignore]', '')}" />
+                                            </p>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+
+                                    <apex:outputPanel layout="block" styleClass="form-group">
+                                        <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.FirstName.Label}" for="firstNameInput"/>
+                                        <apex:outputPanel rendered="{!SUBSTITUTE($Label.HAS_User_Firstname_Help_Text, '[ignore]', '') != ''}">
+                                            <p class="text-secondary">
+                                                <apex:outputText value="{!SUBSTITUTE($Label.HAS_User_Firstname_Help_Text, '[ignore]', '')}" />
+                                            </p>
+                                        </apex:outputPanel>
+                                        <apex:inputField id="firstNameInput" styleClass="form-control" value="{!newUser.FirstName}"  />
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="block" styleClass="form-group">
+                                        <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.LastName.Label}" for="lastNameInput"/>
+                                        <apex:outputPanel rendered="{!SUBSTITUTE($Label.HAS_User_Lastname_Help_Text, '[ignore]', '') != ''}">
+                                            <p class="text-secondary">
+                                                <apex:outputText value="{!SUBSTITUTE($Label.HAS_User_Lastname_Help_Text, '[ignore]', '')}" />
+                                            </p>
+                                        </apex:outputPanel>
+                                        <apex:inputField id="lastNameInput" styleClass="form-control" value="{!newUser.Lastname}"  />
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="block" styleClass="form-group">
+                                        <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Email.Label}" for="eMailInput"/>
+                                        <apex:outputPanel rendered="{!SUBSTITUTE($Label.HAS_User_Email_Help_Text, '[ignore]', '') != ''}">
+                                            <p class="text-secondary">
+                                                <apex:outputText value="{!SUBSTITUTE($Label.HAS_User_Email_Help_Text, '[ignore]', '')}" />
+                                            </p>
+                                        </apex:outputPanel>
+                                        <apex:inputField id="eMailInput" styleClass="form-control" value="{!newUser.Email}" />
+                                    </apex:outputPanel>
+                                    <apex:commandButton title="{!$Label.HAS_Create_Account}" action="{!registerUser}" value="{!$Label.HAS_Create_Account}" styleClass="clrButton" />
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+            </apex:form>
+        </apex:define>
+    </apex:composition>
+</apex:page>

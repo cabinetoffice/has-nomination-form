@@ -1,0 +1,14 @@
+{!Receiving_User.Salutation__c} {!Receiving_User.FirstName} {!Receiving_User.LastName},
+
+Thank you for creating an account for your honours nomination.
+
+Before you can complete your registration you will need to validate your account.
+
+Your password has automatically been created by the system, please follow the link below to personalise it:
+{!Community_Url}
+
+--
+{!Organization.Name}
+{!Organization.Division}
+{!Organization.Address}
+T: {!Organization.Phone}

@@ -1,0 +1,39 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Account" extensions="bg_AccountProfileExtension" >
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+            <nav id="proposition-menu">
+                <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+                <apex:define name="login-proposition">
+                    <c:HAS_Community_Proposition />
+                </apex:define>
+            </nav>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+      <!--  <apex:define name="pageHeader" >
+            <h2 class="heading-medium">{!$Label.HAS_Manage_Nominations_Label}</h2>
+        </apex:define> -->
+
+        <apex:define name="mainContent">
+        <div class="grid-row">
+			<div class="column-two-thirds">
+                  <apex:outputPanel id="mainContent" layout="block" styleClass="inner">
+                      <apex:outputPanel layout="block" styleClass="form-group">
+                          <a href="/HAS_PageDispatcher" class="clrButton clrButton-get-started">{!$Label.HAS_Create_New_Nomination}</a>
+                      </apex:outputPanel>
+                      <h2 class="heading-medium">{!$Label.HAS_Manage_Nominations_Label}</h2>
+                      <c:HAS_Nomination_List nominations="{!submissions}" reRenderIds="mainContent" />
+                  </apex:outputPanel>
+              </div>
+        </div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Control the order and statuses of the form process</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Order_in_Form__c</fullName>
+        <description>Where in the order of the form process this page appears</description>
+        <externalId>false</externalId>
+        <label>Order in Form</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Page_Name__c</fullName>
+        <description>Name of the Visualforce page to be referenced</description>
+        <externalId>false</externalId>
+        <label>Page Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>HAS Page Reference</label>
+    <visibility>Protected</visibility>
+</CustomObject>

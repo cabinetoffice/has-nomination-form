@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <description>Links in the header for navigating the main pages of the community</description>
+    <label>has_login_proposition</label>
+</ApexComponent>

@@ -1,0 +1,5 @@
+<apex:component >
+    <div class="inner-block">
+        <apex:pageMessages id="pageMessages" />
+    </div>
+</apex:component>

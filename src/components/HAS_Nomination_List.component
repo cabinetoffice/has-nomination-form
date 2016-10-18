@@ -1,0 +1,25 @@
+<apex:component id="viewNominationsComponent" controller="bg_HAS_Nomination_List_Controller">
+        <apex:attribute name="nominations" description="The Nominations records to display" type="Case[]" />
+        <apex:attribute name="reRenderIds" description="list of strings relating to a list of VF items to rerender" type="String[]" required="false" />
+        <apex:form id="theForm">
+            <apex:dataTable id="nominationsTable" styleClass="clrDataTable" value="{!nominations}" var="caseRecord">
+                <apex:repeat value="{!$ObjectType.Case.FieldSets.Nomination_List}" var="field">
+                    <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!caseRecord[field]}" headerClass="" />
+
+                </apex:repeat>
+                <apex:column id="titleColumn" title="Action" headerValue="Action" >
+                   <apex:outputPanel rendered="{!caseRecord.Progress__c == $Label.HAS_Nomination_Completed_Status}">
+                      <apex:commandLink id="viewSubmission" styleClass="clrButton" value="{!$Label.HAS_View_Nomination_Button}" action="{!redirectToCompletedNomination}" reRender="reRenderIds">
+                          <apex:param id="viewSubmissionParam" value="{!caseRecord.Id}" assignTo="{!nominationId}" name="nominationId"/>
+                      </apex:commandLink>
+                  </apex:outputPanel>
+                  <apex:outputPanel rendered="{!caseRecord.Progress__c != $Label.HAS_Nomination_Completed_Status}">
+                    <apex:commandLink id="editSubmission" styleClass="clrButton" value="{!$Label.HAS_Continue_Editing_Button}" action="{!redirectToNomination}" reRender="reRenderIds">
+                        <apex:param id="editSubmissionParam" value="{!caseRecord.Id}" assignTo="{!nominationId}" name="nominationId"/>
+                    </apex:commandLink>
+                  </apex:outputPanel>
+                </apex:column>
+            </apex:dataTable>
+        </apex:form>
+
+</apex:component>

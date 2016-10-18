@@ -1,0 +1,64 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" controller="bg_LoginController">
+
+   <apex:composition template="{!$Site.Template}">
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+            <nav>
+                <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+            </nav>
+        </apex:define>
+
+        <apex:define name="global-breadcrumb">
+            <nav>
+            <ol role="breadcrumbs" class="group">
+                <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+                <li><strong>{!$Label.HAS_Login_Label}</strong></li>
+            </ol>
+            </nav>
+        </apex:define>
+        
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="pageHeader" >
+            <c:HAS_Page_Header header="{!$Label.HAS_Login_Page_Header}" strapline="" paragraph="" />
+        </apex:define>
+
+        <apex:define name="mainContent">
+        <apex:form >
+            <div class="grid-row">
+                <div class="column-half">
+                    <h2 class="heading-large" >{!$Label.HAS_Existing_User_Label}</h2>
+                    <p>{!$Label.HAS_Existing_User_Login_Text}</p>
+                    <div class="form-group">
+                        <apex:outputLabel styleClass="form-label" value="{!$Label.site.username}" for="username" />
+                        <apex:inputText id="username" value="{!username}" styleClass="form-control" />
+                        <c:HAS_Field_Error errorString="{!usernameError}" />
+                    </div>
+                    <div class="form-group">
+                        <apex:outputLabel styleClass="form-label" value="{!$Label.site.password}" for="password" />
+                        <apex:inputSecret id="password" value="{!password}" styleClass="form-control" />
+                        <c:HAS_Field_Error errorString="{!passwordError}" />
+                    </div>
+                    <apex:commandButton styleClass="HASButton" title="{!$Label.site.login_button}" value="{!$Label.site.login_button}" action="{!login}"  />
+                    <apex:outputLink value="{!$Page.HAS_ForgotPassword}"> {!$Label.HAS_Forgot_Password_Label}</apex:outputLink>
+                    <p></p>
+                </div>
+                <div class="column-half">
+                    <h2 class="heading-large">{!$Label.HAS_New_User_Label}</h2>
+                    <p>{!$Label.HAS_Create_Account_Strapline}</p>
+                    <p>
+                        <apex:commandButton styleClass="HASButton" title="{!$Label.HAS_Register_Button}" value="{!$Label.HAS_Register_Button}" action="{!register}" />
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+        </apex:form>
+        </apex:define>
+    </apex:composition>
+
+</apex:page>

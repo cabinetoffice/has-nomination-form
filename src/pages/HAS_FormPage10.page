@@ -1,0 +1,74 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationCommonExtension">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+	<apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+              <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+		            <apex:outputPanel layout="block" styleClass="inner">
+		                <apex:outputPanel layout="block" id="content" styleClass="home">
+		                    <apex:form styleClass="main">
+
+							<h1 class="heading-medium">
+								<apex:outputText value="{!$Label.HAS_Form_Page_10_Title}" />
+							</h1>
+
+		                    <apex:outputPanel styleClass="form-group" layout="block">
+		                        <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Recommendation_Summary_Label}">
+		                            <p class="text-secondary">
+		                               <apex:outputText value="{!$ObjectType.Case.Fields.Recommendation_summary__c.inlineHelpText}" />
+		                            </p>
+		                        </apex:outputLabel>
+		                        <apex:inputTextarea value="{!Nomination.Recommendation_summary__c}" styleClass="form-control" rows="5" html-makeReadOnly="{!readOnlyMode}" required="true" />
+		                    </apex:outputPanel>
+
+		                         <apex:outputPanel styleClass="form-group" layout="block">
+		                            <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep4" rendered="{!!readOnlyMode}" />
+		                            <br />
+		                            <br />
+		                            <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep4" immediate="TRUE"/>
+
+		                            <!-- Read only
+		                            <apex:commandButton styleClass="clrButton" action="{!movePageForeward}" value="{!$Label.HAS_Next_Label}" id="advanceStep4" rendered="{!readOnlyMode}" />
+									-->
+		                        </apex:outputPanel>
+
+		                    </apex:form>
+		                </apex:outputPanel>
+		            </apex:outputPanel>
+		            <script type="text/javascript" charset="utf-8">
+
+		                jQuery(document).ready(function($)
+		                {
+		                    $("[makeReadOnly='true']").attr('disabled', 'disabled');
+		                });
+		            </script>
+			</div>
+		</div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

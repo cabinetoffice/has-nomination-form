@@ -1,0 +1,60 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" >
+
+    <apex:composition template="{!$Site.Template}">
+    <apex:define name="title">
+        <title>{!$Label.HAS_Label}</title>
+    </apex:define>
+
+    <apex:define name="header-proposition">
+        <nav>
+            <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+        </nav>
+    </apex:define>
+
+        <apex:define name="global-breadcrumb">
+            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Privacy_Label}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageHeader" >
+            <apex:outputPanel layout="block">
+                <h1 class="page-header">{!$Label.HAS_Privacy_Label}</h1>
+            </apex:outputPanel>
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home" >
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Privacy_When_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Privacy_When_Text}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Privacy_How_We_Use_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Privacy_How_We_Use_Text}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Policy_Data_Held_Where_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Policy_Data_Held_Where_Text}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Policy_Contacting_You_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Policy_Contacting_You_Text1}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Policy_Data_Access_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Policy_Data_Access_Text}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Policy_DPA_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Policy_DPA_Text}" escape="false" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="form-group"  >
+                        <h2 class="heading-large">{!$Label.HAS_Policy_Change_Label}</h2>
+                        <apex:outputText value="{!$Label.HAS_Policy_Change_Text}" escape="false" />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,70 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationCommonExtension">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+    <apex:composition template="{!$Site.Template}">
+		<!-- Posts the Nominee has held -->
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home">
+                    <apex:form styleClass="main">
+
+                    <h1 class="heading-medium">
+                        <apex:outputText value="{!$Label.HAS_Form_Page_12_Title}" />
+                    </h1>
+
+                        <p>
+                            <apex:outputText value="{!$Label.HAS_Recommendation_Leader_Text}" escape="false"/>
+                        </p>
+
+						<apex:outputPanel styleClass="form-group" layout="block">
+							<apex:outputLabel styleClass="form-label" escape="false" value="{!$Label.HAS_Benefits_Label}" for="benefits">
+								<p><apex:outputText escape="false" value="{!$Label.HAS_Benefits_Help_Text}" /></p>
+							</apex:outputLabel>
+							<apex:inputTextarea value="{!Nomination.Benefits_Details__c}" id="benefits" styleClass="form-control gds-textarea" rows="5" html-makeReadOnly="{!readOnlyMode}" required="true" />
+						</apex:outputPanel>
+
+                        <apex:outputPanel styleClass="formGroup" layout="block">
+                           <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep12" rendered="{!!readOnlyMode}" />
+                            <br />
+                            <br />
+                            <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep12" immediate="TRUE" />
+                            <!-- Read only
+                            <apex:commandButton styleClass="clrButton" action="{!movePageForeward}" value="{!$Label.HAS_Next_Label}" id="advanceStep5" rendered="{!readOnlyMode}" />
+                            -->
+                        </apex:outputPanel>
+
+                    </apex:form>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <script type="text/javascript" charset="utf-8">
+
+                jQuery(document).ready(function($)
+                {
+                    $("[makeReadOnly='true']").attr('disabled', 'disabled');
+                });
+            </script>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:component >
+    <apex:attribute name="errorString" description="The error string to be displayed" type="String" />
+    
+    <apex:outputPanel rendered="{!errorString != ''}">
+        <apex:outputPanel layout="block" styleClass="errorMsg">
+            <apex:outputText value="{!$Label.HAS_Field_Error_Label} {!errorString}" escape="false"/>
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:component>

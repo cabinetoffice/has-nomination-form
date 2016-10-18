@@ -1,0 +1,84 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Post__c" extensions="bg_HAS_PostsFormController">
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home">
+                    <apex:form styleClass="main">
+
+                        <h1 class="heading-medium">
+                            <apex:outputLabel value="{!$Label.HAS_Post_Form_Title}"/>
+                        </h1>
+
+                        <apex:inputHidden value="{!Post__c.Nomination_Id__c}" id="nominationId" />
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Post_Name_Label}">
+                              <apex:inputField value="{!Post__c.name}" styleClass="form-control inputText" required="TRUE" />
+                            </apex:outputLabel>
+                        </apex:outputPanel>
+
+                        <div class="form-group">
+                            <apex:outputText escape="false" styleClass="form-label" value="{!$Label.HAS_Post_Date_From_To_Label}" />
+                        </div>
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Post_Date_Start_Label}">
+                            <apex:inputField type="text" value="{!Post__c.Start_Date__c}" styleClass="form-control" required="TRUE" />
+                          </apex:outputLabel>
+                      </apex:outputPanel>
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Post_Date_End_Label}">
+                            <apex:inputField type="text" value="{!Post__c.End_Date__c}" styleClass="form-control" required="TRUE"/>
+                          </apex:outputLabel>
+                      </apex:outputPanel>
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Post_Position_Status_Label}">
+                            <apex:inputField styleClass="form-control clrSelect" value="{!Post__c.Position_Status__c}" required="TRUE" />
+                          </apex:outputLabel>
+                      </apex:outputPanel>
+
+                      <apex:outputPanel styleClass="formGroup" layout="block">
+                          <apex:commandButton styleClass="clrButton" action="{!savePost}" value="{!$Label.HAS_Save_Label}" id="savePost"/>
+                          <apex:commandLink action="{!cancelPost}" value="{!$Label.HAS_Cancel_Label}" id="prevStep5" immediate="TRUE" />
+
+                      </apex:outputPanel>
+
+                    </apex:form>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <script type="text/javascript" charset="utf-8">
+
+                jQuery(document).ready(function($)
+                {
+                    $("[makeReadOnly='true']").attr('disabled', 'disabled');
+                });
+            </script>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

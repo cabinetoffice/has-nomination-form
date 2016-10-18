@@ -1,0 +1,138 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationNominatorExtension">
+    <c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <div class="grid-row">
+                <div class="column-two-thirds">
+                        <apex:outputPanel layout="block" styleClass="inner">
+
+                            <apex:outputPanel layout="block" id="content" styleClass="home">
+
+                            <h1 class="heading-medium">
+                                <apex:outputText value="{!$Label.HAS_Form_Page_3_Title}" />
+                            </h1>
+
+                                <apex:outputPanel id="nomineeDetailsInput">
+                                    <apex:form id="nomineeForm">
+
+
+                                        <apex:outputPanel layout="block" styleClass="form-group">
+                                            <apex:outputLabel styleClass="form-label" value="{!$Label.HAS_Telephone_Number_Label}" for="Phone" />
+                                            <apex:inputField styleClass="form-control" value="{!nominator.Phone}" id="Phone" required="TRUE" html-makeReadOnly="{!readOnlyMode}" />
+                                        </apex:outputPanel>
+
+                                        <apex:outputPanel layout="block" styleClass="form-group">
+                                            <apex:outputLabel styleClass="form-label" value="{!$Label.HAS_Form_Email_Address_Label}" for="Email" />
+                                            <apex:inputField styleClass="form-control" value="{!nominator.Email}" id="Email" required="TRUE" html-makeReadOnly="{!readOnlyMode}" />
+                                        </apex:outputPanel>
+
+
+                                        <apex:outputPanel layout="block" styleClass="form-group">
+                                            <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep3" rendered="{!!readOnlyMode}" />
+                                            <br />
+                                            <br />
+                                            <!-- <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep3" immediate="TRUE"/> -->
+                                            <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep2" immediate="TRUE" />
+                                            <!-- read only -->
+                                            <!-- <apex:commandButton styleClass="clrButton" action="{!movePageForeward}" value="{!$Label.HAS_Next_Label}" id="advanceStep3" rendered="{!readOnlyMode}" /> -->
+                                        </apex:outputPanel>
+
+                                    </apex:form>
+                               </apex:outputPanel>
+
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        <script type="text/javascript" charset="utf-8">
+
+                            jQuery(document).ready(function($)
+                            {
+                                console.log('readOnlyMode: ' + {!readOnlyMode});
+
+                                if($('[id$=ethnicOriginGroupPanel]').find('select').val() != '')
+                                {
+                                    showEthnicOrigin();
+                                }
+                                else
+                                {
+                                    hideEthnicOrigin();
+                                }
+
+                                {!IF(readOnlyMode,
+                                    "makeEthnicOriginDisabled();$('[makeReadOnly=true]').attr('disabled', 'disabled');",
+                                    "$('[id$=EthnicOrigin]').attr('required', 'TRUE');"
+                                )}
+                            });
+
+                            function showEthnicOrigin()
+                            {
+                                jQuery('[id$=ethnicOriginPanel]').show();
+                            };
+                            function hideEthnicOrigin()
+                            {
+                                jQuery('[id$=ethnicOriginPanel]').hide();
+                            };
+                            function makeEthnicOriginDisabled()
+                            {
+                                count = 0;
+                                clearIntervalBoolean = false;
+                                var checkEthnicIsDisabled = setInterval
+                                (
+                                    function()
+                                    {
+                                        var ethnicOriginElement = jQuery('[id$=EthnicOrigin]');
+                                        var notReRenderedElement = jQuery('[notReRendered=true]');
+                                        var updatedEthnicOriginElement = ethnicOriginElement.prop('disabled');
+
+                                        if(ethnicOriginElement.size() > 0 && notReRenderedElement.size() == 0)
+                                        {
+                                            if (!updatedEthnicOriginElement)
+                                            {
+                                                ethnicOriginElement.prop('disabled', 'disabled');
+                                            }
+                                            else if (updatedEthnicOriginElement)
+                                            {
+                                                clearIntervalBoolean = true;
+                                            }
+                                        }
+
+                                        count++;
+
+                                        if(count > 100 || clearIntervalBoolean)
+                                        {
+                                            clearInterval(checkEthnicIsDisabled);
+                                        }
+
+                                    },
+                                    100
+                                );
+                            }
+                        </script>
+                    </div>
+                </div>
+            </apex:define>
+    </apex:composition>
+
+</apex:page>

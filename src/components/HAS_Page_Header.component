@@ -1,0 +1,13 @@
+<apex:component >
+    <apex:attribute name="header" description="The text to display as the heading" type="string" required="true" />
+    <apex:attribute name="strapline" description="The text to display as the strapline" type="string" required="false" />
+    <apex:attribute name="paragraph" description="The text to display within paragraph tag" type="string" required="false" />
+
+    <div>
+        <h1 class="page-header">{!header}</h1>
+        <div class="strapline">
+            <h2>{!strapline}</h2>
+        </div>
+        <p>{!paragraph}</p>
+    </div>
+</apex:component>

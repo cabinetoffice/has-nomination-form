@@ -1,0 +1,35 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" >
+    <apex:composition template="{!$Site.Template}">
+
+        <!-- <apex:define name="login-proposition">
+            <c:HAS_Community_Proposition />
+        </apex:define>
+        
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+            <nav>
+                <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+            </nav>
+        </apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define> -->
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home">
+                    <p class="lede" style="height:500px;">The Honours and Appointments Secretariat is working on an online form to nominate someone for a UK National Honour. In the meantime you can <a href="https://www.gov.uk/government/publications/nominate-someone-for-a-uk-national-honour">download a form here.</a></p>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:define>
+    </apex:composition>
+</apex:page>

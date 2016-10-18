@@ -1,0 +1,37 @@
+<apex:page id="communitiesSelfRegConfirmPage" showHeader="false" cache="false" title="{!$Label.site.registration_confirmation}" >
+
+    <apex:composition template="HAS_Community_Template" > 
+  <!--   <apex:composition template="{!$Site.Template}"> -->
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+            <c:has_login_proposition />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home" >
+                  <center>
+                        <apex:outputPanel layout="block" styleClass="form-group">
+                            <apex:outputText styleClass="title" value="{!$Label.HAS_Site_Registration_Thankyou_Text}" escape="false" />
+                        </apex:outputPanel>
+
+                        <apex:outputPanel layout="block" styleClass="form-group">
+                            <apex:outputText styleClass="title" value="{!$Label.HAS_Site_Registration_Email_Notification_Text}" escape="false" />
+                        </apex:outputPanel>
+
+                        <apex:outputPanel layout="block" styleClass="form-group">
+                            <apex:outputText styleClass="title" value="{!SUBSTITUTE($Label.HAS_Site_Registration_Assitance_Text,'[emailaddress]', $Label.HAS_Feedback_Email)}" escape="false" />
+                        </apex:outputPanel>
+
+<!--                         <apex:outputPanel layout="block" styleClass="form-group"> -->
+<!--                             <apex:outputLink value="{!$Page.CommunitiesLogin}" rendered="{!$Site.LoginEnabled}">{!$Label.site.go_to_login_page}</apex:outputLink> -->
+<!--                         </apex:outputPanel> -->
+                  </center>
+            </apex:outputPanel>
+          </apex:outputPanel>
+        </apex:define>
+    </apex:composition>
+</apex:page>

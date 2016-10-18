@@ -1,0 +1,43 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationCommonExtension">
+  <apex:composition template="{!$Site.Template}">
+
+  <apex:define name="title">
+      <title>{!$Label.HAS_Label}</title>
+  </apex:define>
+
+  <apex:define name="header-proposition">
+      <nav id="proposition-menu">
+          <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+          <apex:define name="login-proposition">
+              <c:HAS_Community_Proposition />
+          </apex:define>
+      </nav>
+  </apex:define>
+
+  <apex:define name="pageErrors">
+      <c:HAS_Page_Messages />
+  </apex:define>
+
+    <apex:define name="mainContent">
+
+      <apex:outputPanel layout="block" styleClass="inner">
+
+        <apex:outputPanel layout="block" id="content" styleClass="home">
+
+                  <apex:outputText styleClass="title" value="{!$Label.site.error}">
+                   <apex:param value="{!$Site.ErrorDescription}"/>
+
+                   <!-- this parameter needs to be italic in the site.error label -->
+                  </apex:outputText>
+                  <br/>
+                  <br/>
+                  <apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                   <apex:param value="mailto:{!$Site.AdminEmailAddress}"/>
+                   <apex:param value="{!$Label.site.email_us}"/>
+                  </apex:outputText>
+
+             </apex:outputPanel>
+         </apex:outputPanel>
+    </apex:define>
+  </apex:composition>
+</apex:page>

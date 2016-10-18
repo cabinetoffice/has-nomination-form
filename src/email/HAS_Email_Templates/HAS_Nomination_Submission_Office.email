@@ -1,0 +1,73 @@
+An honours nomination web form has been submitted by {!Account.Individual_Salutation__c} {!Account.Individual_FirstName__c} {!Account.Individual_LastName__c}. 
+
+NOMINATION NUMBER: {!Case.CaseNumber} 
+
+NOMINEE DETAILS
+Name: {!Case.Nominee_Name__c} {!Contact.Post_Nominal__c}
+Known as: {!Contact.Known_As__c}
+Street: 
+Town or City: 
+County: 
+Post code: 
+Email: 
+Telephone: 
+
+Date of birth or approx age: {!Contact.Date_of_Birth__c}
+Nationality: {!Contact.is_British__c} {!Contact.Nationality__c}
+
+
+THE RECOMMENDATION
+Summary:
+{!Case.Recommendation_summary__c}
+
+Posts in which the nominee has excelled:
+Number of posts: {!Case.Number_Of_Posts_Added__c}
+
+Benefits resulting from the nominee's service:
+{!Case.Benefits_Details__c}
+
+Others giving similar service: {!Case.Others_In_Post__c}
+
+What makes the nominee stand out from others:
+{!Case.Standout_Details__c}
+
+Other recognition for nominee:
+{!Case.Other_Recognition__c}
+
+SUPPORTERS
+Number of supporters added: {!Case.Number_of_Supports_Added__c}
+Supporter name: {!Supporter__c.Name}
+Dates known: {!Supporter__c.Knew_From_Knew_Until__c}
+Relationship: {!Supporter__c.Relationship__c}
+
+LETTERS OF SUPPORT UPLOADED
+Number of letters uploaded: {!Case.Letters_of_Support_Uploaded__c}
+
+NOMINATOR DETAILS
+Nominator: {!Account.Individual_Salutation__c} {!Account.Individual_FirstName__c} {!Account.Individual_LastName__c}
+Street: {!Contact.MailingStreet}
+Town or City: {!Contact.MailingCity}
+County: {!Contact.MailingState}
+Post code: {!Contact.MailingPostalCode}
+Country: {!Contact.MailingCountry}
+Email: {!Contact.Email}
+Telephone: {!Contact.Phone}
+
+Relationship to nominee :{!Case.Relationship_Nominator_to_Nominee__c}
+
+EQUALITY MONITORING 
+NOMINATOR
+Disability: {!Contact.Disability__c}
+Ethnic origin: {!Contact.Ethnic_Origin__c} {!Contact.Ethnic_Origin__c}
+
+NOMINEE
+Disability: 
+Ethnic origin: 
+
+To view the full details of the nomination including supporter details and to download attachment files go to: {!Case.Link}
+
+-- 
+{!Organization.Name} 
+{!Organization.Division} 
+{!Organization.Address} 
+T: {!Organization.Phone}

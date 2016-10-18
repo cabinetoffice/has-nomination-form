@@ -1,0 +1,20 @@
+Dear {!Account.Individual_Salutation__c} {!Account.Individual_FirstName__c} {!Account.Individual_LastName__c}
+
+Thank you for your nomination. {!IF(Case.Progress_Status__c = $Label.HAS_Nomination_Table_Status_Letters, 'We will begin processing your form once we have received ' & Text(Case.Letters_of_Support_Outstanding__c) & ' letter(s) of support. You can email these to honours@cabinetoffice.gov.uk or send them to the address below. Supporters can also send them directly to us if they wish')}.
+
+Nomination number: {!Case.CaseNumber}
+Nominee: {!Case.Nominee_Name__c}
+
+We will review your nomination. This takes at least 12 to 18 months because of the background work needed to assess a nomination.
+
+You can check the published lists (https://www.gov.uk/honours/honours-lists) to see if your nominee has been successful.
+
+Remember not to tell the person you are nominating as it is not fair to raise their expectations. The number of honours available is strictly limited and unfortunately not everyone can receive recognition this way.
+
+To view this nomination please go to https://hasuat-honoursnominations.cs83.force.com/. Please note that you cannot amend or update your nomination via this website. If you want to change your form, or you want to send further information, please email it to honours@cabinetoffice.gov.uk or post it to the address below.
+
+--
+{!Organization.Name} 
+{!Organization.Division} 
+{!Organization.Address} 
+T: {!Organization.Phone}

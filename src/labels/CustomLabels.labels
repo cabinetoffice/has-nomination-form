@@ -1,0 +1,2077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>HAS_Accepted_File_Formats</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Accepted File Formats</shortDescription>
+        <value>image/gif,image/jpeg,image/png,application/vnd.oasis.opendocument.presentation,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/pdf,application/rtf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Action_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Action Label</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_A_Post</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Add A Post</shortDescription>
+        <value>Add a post</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_Attachments_Limits</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Add Attachments Limits</shortDescription>
+        <value>Each file can be up to 25 mb in size. Supported file formats include gif, jpg, png, odp, ods, odt, pdf, rtf, txt, doc, docx, ppt, pptx, xls, xlsx.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_Attachments_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Add Attachments Text</shortDescription>
+        <value>Please attach at least two letters of support or evidence of recognition that your nominee has recieved as stated in the Recommendation section (for example, newspaper clippings, letters etc.) You can come back and add these later if you do not have them now.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_Attachments_Update_Letters_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Add Attachments Update Letters Text</shortDescription>
+        <value>If you are adding a letter of support please update the status in the Submitting Letter column of the previous step to &apos;Yes&apos; if you haven&apos;t already done so.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_More_Supporters</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Add More Supporters</shortDescription>
+        <value>Add a supporter</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_Supporter_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Add Supporter Text</shortDescription>
+        <value>This must be someone that you can provide a supporting letter from</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Add_Supporter_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Add Supporter Title</shortDescription>
+        <value>Add a supporter</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Address</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Address</shortDescription>
+        <value>Honours and Appointments Secretariat&lt;br/&gt;
+Cabinet Office&lt;br/&gt;
+Ground Floor&lt;br/&gt;
+1 Horseguards Road&lt;br/&gt;
+London SW1A 2HQ</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Attach_Evidence_Document</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Attach Evidence Document</shortDescription>
+        <value>Attach evidence document</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Attachment_Evidence_Option_No</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Attachment Evidence Option No</shortDescription>
+        <value>No, I will send them later</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Attachment_Invalid_FileFormat_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Attachment Invalid FileFormat Error</shortDescription>
+        <value>The file you have tried to attach is not of the correct type. See notes above for accepted file formats.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Attachment_Letters_Option_No</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Attachment_Letters_Option_No</shortDescription>
+        <value>No, I will send them later</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Attachment_Upload_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Attachment Upload Error</shortDescription>
+        <value>Sorry, we have been unable to upload your Attachment.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Benefits_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Benefits Help Text</shortDescription>
+        <value>&lt;ul class=&quot;list list-bullet&quot; &gt;
+            &lt;li&gt;What has their impact been?&lt;/li&gt;
+            &lt;li&gt;How wide is their influence?&lt;/li&gt;
+            &lt;li&gt;What are their achievements?&lt;/li&gt;
+            &lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Benefits_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Benefits Label</shortDescription>
+        <value>It is important that you give as much detail as possible about what your nominee has achieved.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Benefits_Text_and_Bullet_List</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Benefits Text and Bullet List</shortDescription>
+        <value>Please describe the benefits resulting from the nominee’s service to a particular field, area, group, community or humanity at large. 
+&lt;ul&gt;
+&lt;li&gt;What has their impact been?&lt;/li&gt;
+&lt;li&gt;How wide is their influence?&lt;/li&gt;
+&lt;li&gt;What are their achievements?&lt;/li&gt;
+&lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cancel_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cancel Label</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Change_Password_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Change Password Label</shortDescription>
+        <value>Change your password</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Complete_Registration_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Complete Registration Label</shortDescription>
+        <value>Complete your registration</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Contact_Info</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Contact Info</shortDescription>
+        <value>Telephone number: (020) 7276 2777&lt;br/&gt;
+Facsimile number: (020) 7276 2766&lt;br/&gt;
+Email: honours@cabinetoffice.gov.uk</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Contact_Us_Footer_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Contact Us Footer Text</shortDescription>
+        <value>Contact &lt;a href=&quot;mailto:[emailAddress]?subject=Honours and Appointments Secretariat - Service Help Request&quot; &gt;[emailAddress]&lt;/a&gt; for help using this service</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Continue_Editing_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Continue Editing Button</shortDescription>
+        <value>Continue editing</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Description</shortDescription>
+        <value>We put small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Expires_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Expires Label</shortDescription>
+        <value>Expires</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Intro_Message_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Intro Message Label</shortDescription>
+        <value>Our introductory message</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Intro_Message_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Intro Message Text</shortDescription>
+        <value>You may see a pop-up welcome message when you first visit GOV.UK. We’ll store a cookie so that your computer knows you’ve seen it and knows not to show it again.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Label</shortDescription>
+        <value>Cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Name Label</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Page</shortDescription>
+        <value>HAS_CookiesPage</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Purpose_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Purpose Label</shortDescription>
+        <value>Purpose</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Advertising_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Advertising Label</shortDescription>
+        <value>Targeting or Advertising cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Advertising_Text_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Advertising Text 1</shortDescription>
+        <value>&lt;p&gt;From time-to-time, salesforce.com engages third parties to track and analyze usage and volume statistical information from individuals who visit the Company’s Web sites.  Salesforce.com sometimes uses cookies delivered by third parties to track the performance of Company advertisements.  For example, these cookies remember which browsers have visited the Company’s Web sites. The information provided to third parties does not include personal information, but this information may be re-associated with personal information after the Company receives it.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Advertising_Text_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Advertising Text 2</shortDescription>
+        <value>&lt;p&gt;Salesforce.com also contracts with third-party advertising networks that collect IP addresses and other information from Web beacons (see below) on the Company’s Web sites, from emails, and on third-party Web sites. Ad networks follow your online activities over time by collecting Web Site Navigational Information through automated means, including through the use of cookies. They use this information to provide advertisements about products and services tailored to your interests. You may see these advertisements on other Web sites. This process also helps us manage and track the effectiveness of our marketing efforts.&lt;/p&gt;
+&lt;p&gt;Third parties, with whom the Company partners to provide certain features on our Web sites or to display advertising based upon your Web browsing activity, use Flash cookies to collect and store information.  Flash cookies are different from browser cookies because of the amount of, type of, and how data is stored.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Cookies_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Cookies Label</shortDescription>
+        <value>Cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Description_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Description Label</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Functionality_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Functionality Label</shortDescription>
+        <value>Functionality cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Functionality_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Functionality Text</shortDescription>
+        <value>&lt;p&gt;Functionality cookies allow the Company’s Web sites to remember information you have entered or choices you make (such as your username, language, or your region) and provide enhanced, more personal features.  These cookies also enable you to optimize your use of salesforce.com’s Services after logging in. These cookies can also be used to remember changes you have made to text size, fonts and other parts of web pages that you can customise.&lt;/p&gt;
+&lt;p&gt;Salesforce.com uses local shared objects, also known as Flash cookies, to store your preferences or display content based upon what you view on our Web sites to personalize your visit.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Label</shortDescription>
+        <value>Salesforce cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Performance_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Performance Label</shortDescription>
+        <value>Performance cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Performance_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Performance Text</shortDescription>
+        <value>&lt;p&gt;These cookies collect information about how Visitors use our Web site, including which pages visitors go to most often and if they receive error messages from certain pages. These cookies do not collect information that individually identifies a Visitor. All information these cookies collect is aggregated and anonymous. It is only used to improve how the Company’s Web site functions and performs.&lt;/p&gt;
+&lt;p&gt;From time-to-time, salesforce.com engages third parties to track and analyze usage and volume statistical information from individuals who visit the Company’s Web sites. Salesforce.com may also utilize Flash cookies for these purposes.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Required_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Required Label</shortDescription>
+        <value>Required cookies</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Required_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Required Text</shortDescription>
+        <value>&lt;p&gt;Required cookies enable you to navigate the website and use its features, such as accessing secure areas of the website and using salesforce.com Services.&lt;/p&gt;
+&lt;p&gt;If you have chosen to identify yourself to salesforce.com, the Company uses cookies containing encrypted information to allow the Company to uniquely identify you. Each time you log into the Services, a cookie containing an encrypted, unique identifier that is tied to your account is placed on your browser. These cookies allow the Company to uniquely identify you when you are logged into the Services and to process your online transactions and requests.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Salesforce_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Salesforce Text</shortDescription>
+        <value>The Register of Consultant Lobbyists is built on the Force.com (Salesforce) platform.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Seen_Message_Expires</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Seen Message Expires</shortDescription>
+        <value>1 month</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Seen_Message_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Seen Message Label</shortDescription>
+        <value>seen_cookie_message</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Cookies_Seen_Message_Purpose</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Cookies Seen Message Purpose</shortDescription>
+        <value>Saves a message to let us know that you have seen our cookie message</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Create_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Create Account</shortDescription>
+        <value>Create account</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Create_Account_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Create Account Header</shortDescription>
+        <value>Create an account</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Create_Account_Strapline</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Create Account Strapline</shortDescription>
+        <value>In order to submit a nomination you must first set up an account.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Create_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Create Label</shortDescription>
+        <value>Create</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Create_New_Nomination</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Create New Nomination</shortDescription>
+        <value>Create a new nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Crown_Copyright_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Crown Copyright Label</shortDescription>
+        <value>© Crown copyright</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Crown_Copyright_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Crown Copyright URL</shortDescription>
+        <value>https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Date_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Date Format Hint</shortDescription>
+        <value>Dates should be entered as DD/MM/YYYY for example: 03/04/1981</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Date_Of_Birth_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Date Of Birth Label</shortDescription>
+        <value>Date of birth or approximate age if you don’t know their date of birth</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Default_Nomination_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Default Nomination Status</shortDescription>
+        <value>Nominator Name</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Delete_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Delete Label</shortDescription>
+        <value>Remove</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Drafting_Service_Help</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS_Drafting_Service_Help</shortDescription>
+        <value>Honours cannot be bought: they are available to all. Nominations are assessed on an equal and transparent basis. The Cabinet Office does not endorse the use of fee-charging drafting services when completing this form. Please tell us if you have made use of such a service by ticking the box below.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Drafting_Service_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Drafting_Service_Label</shortDescription>
+        <value>Honours are available to everyone and cannot be bought. Nominations are assessed on an equal and transparent basis. The Cabinet Office does not endorse the use of fee-charging drafting services when completing this form. Please tick here if you have made use of such a service.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Drafting_Service_Progressive_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS_Drafting_Service_Progressive_Label</shortDescription>
+        <value>Help with drafting service regulations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Edit_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Edit Label</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Email_Feedback_Subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Email Feedback Subject</shortDescription>
+        <value>Honours and Appointments Secretariat</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Error_Field_Required</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Error Field Required</shortDescription>
+        <value>[field] is required.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Error_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Error Label</shortDescription>
+        <value>&lt;span style=&quot;color:#cc0000&quot;&gt;&lt;h4&gt;Error:&lt;/h4&gt;&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Evidence_Option_Question</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Evidence Option Question</shortDescription>
+        <value>Do you have the documents now?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Evidence_Page_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Evidence Page Text</shortDescription>
+        <value>Attach any documents which provide evidence of your nominee&apos;s contribution. For example: newspaper clippings or letters</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Evidence_Send_Later</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Evidence Send Later</shortDescription>
+        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horseguards Road, London SW1A 2HQ.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Existing_User_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Existing User Label</shortDescription>
+        <value>Existing user</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Existing_User_Login_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Existing User Login Text</shortDescription>
+        <value>If you have an existing account please sign in.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Feedback_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Feedback Email</shortDescription>
+        <value>honours@cabinetoffice.gov.uk</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Field_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Field Error</shortDescription>
+        <value>Field name error</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Field_Error_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Field Error Label</shortDescription>
+        <value>&lt;strong&gt;Error:&lt;/strong&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_File_Uploaded_Successfully</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS File Uploaded Successfully</shortDescription>
+        <value>File uploaded successfully</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Forgot_Password_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Forgot Password Label</shortDescription>
+        <value>Forgotten your password?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Email_Address_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Email Address Label</shortDescription>
+        <value>Email address</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Forenames_Label</fullName>
+        <categories>Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Forenames Label</shortDescription>
+        <value>Forenames</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_10_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 10 Title</shortDescription>
+        <value>Describe the service your nominee has provided</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_11_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 11 Title</shortDescription>
+        <value>List the posts your nominee has excelled in</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_12_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 12 Title</shortDescription>
+        <value>Describe the impact your nominee has had</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_13_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 13 Title</shortDescription>
+        <value>Is anyone else providing a similar service?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_14_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 14 Title</shortDescription>
+        <value>Has your nominee received any other awards or recognition for their contribution?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_15_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 15 Title</shortDescription>
+        <value>Evidence of your nominee&apos;s contribution</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_16_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 16 Text</shortDescription>
+        <value>You may attach .doc, .pdf, .jpg or .png files</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_16_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 16 Title</shortDescription>
+        <value>Attach evidence</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_17_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 17 Text</shortDescription>
+        <value>&lt;p&gt;We need two or more letters of support which endorse your nominee’s contribution. These should come from people who are familiar with your nominee’s services.&lt;/p&gt;
+
+&lt;p&gt;Please enter the names of your supporters. If you have the supporting letters now you can attach them on the next page. If not, you can send them later.&lt;/p&gt;
+
+&lt;p&gt;If your supporters wish to send any supporting letters to us directly they can email &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or post them to Honours and Appointments Secretariat, Cabinet Office, Room G/39, 1 Horse Guards Road, London SW1A 2HQ.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_17_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 17 Title</shortDescription>
+        <value>Supporters</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_18_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 18 Title</shortDescription>
+        <value>Letters of support</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_19_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 19 Title</shortDescription>
+        <value>Attach letters of support</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_1_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 1 Title</shortDescription>
+        <value>What is your name?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_1_subTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 1 subTitle</shortDescription>
+        <value>Guidance notes</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_20_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 20 Title</shortDescription>
+        <value>Equality monitoring</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_21_Send_Your_Nomination</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 21 Send Your Nomination</shortDescription>
+        <value>Send your nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_21_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 21 Title</shortDescription>
+        <value>Review your answers before sending</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_22_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 22 Text</shortDescription>
+        <value>&lt;ul class=&quot;list list-bullet&quot;&gt;
+&lt;li&gt;You will receive an acknowledgement email to confirm your nomination.&lt;/li&gt;
+&lt;li&gt;We will review your nomination. This takes at least 12 to 18 months because of the background work needed to assess a nomination.&lt;/li&gt;
+&lt;li&gt;You can check the &lt;a href=&quot;https://www.gov.uk/honours/honours-lists&quot; rel=&quot;external&quot;&gt;published lists&lt;/a&gt; to see if your nominee has been successful.&lt;/li&gt;
+&lt;li&gt;Please do not tell the person you are nominating as it is not fair to raise their expectations. The number of honours available is strictly limited and unfortunately not everyone can receive recognition this way.&lt;/li&gt;
+&lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_22_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 22 Title</shortDescription>
+        <value>Thank you for your nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_22_lede</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 22 lede</shortDescription>
+        <value>What happens next?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_2_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 2 Text</shortDescription>
+        <value>This address will be used for an acknowledgement and any future correspondence.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_2_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 2 Title</shortDescription>
+        <value>What is your address?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_3_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 3 Title</shortDescription>
+        <value>What are your contact details?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_4_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 4 Title</shortDescription>
+        <value>What is your nominee&apos;s name?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_5_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 5 Text</shortDescription>
+        <value>If your candidate is successful, this address will be used for correspondence.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_5_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Page 5 Title</shortDescription>
+        <value>What is your nominee&apos;s address?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_6_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 6 Title</shortDescription>
+        <value>What are your nominee&apos;s contact details?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_6_Title_RO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 6 Title RO</shortDescription>
+        <value>Attachments added</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_7_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 7 Title</shortDescription>
+        <value>What is your nominee&apos;s date of birth?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_8_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 8 Title</shortDescription>
+        <value>What is your nominee&apos;s nationalty?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Page_9_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Form Page 9 Title</shortDescription>
+        <value>What is your relationship to the nominee?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Title</shortDescription>
+        <value>Nomination for a UK National Honour</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Upload_Evidence_Page_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Upload Evidence Page Name</shortDescription>
+        <value>has_formpage16</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Form_Upload_Letters_Page_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Form Upload Letters Page Name</shortDescription>
+        <value>has_formpage19</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Formpage17_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Formpage17 Name</shortDescription>
+        <value>has_formpage17</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Formpage20_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Formpage20 Name</shortDescription>
+        <value>has_formpage20</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Get_Started_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Get Started</shortDescription>
+        <value>Get started</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 1</shortDescription>
+        <value>Who May Make a Nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_10</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 10</shortDescription>
+        <value>Non-UK Citizens</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_10_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 10 Text</shortDescription>
+        <value>People who are not UK citizens or citizens of Commonwealth countries of which The Queen is Head of State are eligible to be considered for awards, but the award may be an honorary one.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_11</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 11</shortDescription>
+        <value>The Queen&apos;s Award for Voluntary Service</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_11_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 11 Text</shortDescription>
+        <value>Honours can only be given to individuals. If you wish to nominate a group, the QAVS recognises outstanding achievement by groups in the community. Further information and a nomination form can be obtained at &lt;a href=&quot;http://www.gov.uk/queens-award-for-voluntary-service&quot;&gt;www.gov.uk/queens-award-for-voluntary-service&lt;/a&gt; or by calling 020 7271 6206.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_12</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 12</shortDescription>
+        <value>Equality Monitoring</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_12_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Guidance 12 Text</shortDescription>
+        <value>Please help us to assess the effectiveness of the honours system by filling in the monitoring section.
+
+One part is about you and the other is about the nominee. This information will help us to improve the coverage of the honours system by ensuring that all areas of society are aware of the nomination process and are nominated for honours. Monitoring helps us to identify gaps.
+
+This information will be used only in aggregate for monitoring purposes and is not part of the assessment of the nominee. There are no quotas in the honours system for particular groups.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_13</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 13</shortDescription>
+        <value>Enquiries</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_13_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 13 Text</shortDescription>
+        <value>Further enquiries relating to the UK honours system may be answered on our website which can be found at: &lt;a href=&quot;www.gov.uk/honours&quot;&gt;www.gov.uk/honours&lt;/a&gt; or by writing to:</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_1_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Guidance 1 Text</shortDescription>
+        <value>Anyone may nominate anyone else by completing this form. It is not possible to nominate yourself.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 2</shortDescription>
+        <value>Completing the Nomination Form</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_2_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Guidance 2 Text</shortDescription>
+        <value>Please fill in the nomination form completely and accurately, following the instructions in each section. It is important that you provide as much information as possible about your nominee. Don’t just list jobs or posts held: try instead to explain what their actual contribution or impact has been.
+&lt;br/&gt;&lt;br/&gt;
+Please do not send in examples of the nominee’s work (e.g. videos, photographs, books) as nomination information is scanned into an electronic system and such evidence cannot be kept.
+&lt;br/&gt;&lt;br/&gt;
+You may find it useful to refer to our guidance &lt;a href=&quot;https://www.gov.uk/government/publications/honours-how-to-write-citations&quot;&gt;How to Write a Nomination&lt;/a&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_3</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 3</shortDescription>
+        <value>Number and Type of Honours</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_3_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 3 Text</shortDescription>
+        <value>Honours are given to people from all walks of life and all sections of society who have made a difference to their community. The number of honours available is strictly limited and therefore, however valuable their service, unfortunately not everyone can receive recognition in this way. It is important to realise that an honour will not automatically follow a submission. You do not need to suggest the type and level of award – these will be determined when the nomination is assessed. Most awards are made in the Order of the British Empire at Member (MBE) level or for a British Empire Medal (BEM).</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_4</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 4</shortDescription>
+        <value>Timing of Nominations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_4_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 4 Text</shortDescription>
+        <value>Honours lists are published at New Year and on the occasion of The Sovereign’s Birthday. There are no deadlines for the receipt of nomination forms, but their consideration is likely to take at least 12 to 18 months. This is because of the background work needed to assess a nomination. So you should not try to nominate a person for a specific honours list. Nominators will need to check published lists (in the London Gazette, national newspapers or at &lt;a href=&quot;http://www.gov.uk&quot;&gt;www.gov.uk&lt;/a&gt;) to see if their nominee is successful.
+&lt;br/&gt;&lt;br/&gt;
+Nominations should be made while the nominee is still active and, if possible, at least 12 months before he/she is expected to retire or stand down, because of the time needed to assess their contribution.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_5</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 5</shortDescription>
+        <value>Unsuccessful Nominations and Re-nominations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_5_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 5 Text</shortDescription>
+        <value>If, after two years, your nominee has not been successful you can assume the nomination has lapsed. You may re-nominate them, but a different outcome is unlikely unless your nominee has had additional achievements.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_6</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 6</shortDescription>
+        <value>Confidentiality</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_6_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 6 Text</shortDescription>
+        <value>All nominations for honours are treated in the strictest confidence. The nominee should not be told that they have been nominated, as it is not fair to raise their expectations.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_7</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 7</shortDescription>
+        <value>Support Letters</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_7_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 7 Text</shortDescription>
+        <value>Letters of support should be provided from people with first-hand knowledge of the nominee who can endorse their contribution or supply additional information. At least two letters of support are required to support a nomination.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_8</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 8</shortDescription>
+        <value>Acknowledgement and Progress of Nominations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_8_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 8 Text</shortDescription>
+        <value>We will acknowledge receipt of your nomination. We regret that we cannot enter into correspondence on the merits of a particular nomination.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_9</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Guidance 9</shortDescription>
+        <value>Changes to Information Submitted</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Guidance_9_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Guidance 9 Text</shortDescription>
+        <value>You may send additional information to support the nomination at any time. We will ensure that it is considered with the existing papers. The Honours and Appointments Secretariat should also be advised if there has been any important change to the information supplied on the nomination form, such as the home address of the nominee. You can ring or email the Honours and Appointments Secretariat at any time for an update on your nomination.
+&lt;br/&gt;&lt;br/&gt;
+&lt;strong&gt;You must notify the Honours and Appointments Secretariat immediately if your nominee dies, as it is not possible to award an honour posthumously.&lt;/strong&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Home_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Home Label</shortDescription>
+        <value>Home</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Home_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Home Page</shortDescription>
+        <value>/</value>
+    </labels>
+    <labels>
+        <fullName>HAS_If_Known_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS If Known Format Hint</shortDescription>
+        <value>If known</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Knew_From_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Knew From Header</shortDescription>
+        <value>Knew from</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Knew_Until_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Knew Until</shortDescription>
+        <value>Knew until</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Known_As_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Known As Format Hint</shortDescription>
+        <value>If different from above</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Label</shortDescription>
+        <value>Cabinet Office - Nominations and Honours</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Letter_Option_Question</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Letter Option Question</shortDescription>
+        <value>Do you have the letters of support now?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Letter_Page_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Letter Page Text</shortDescription>
+        <value>We need two or more letters of support which endorse your nominee&apos;s contribution. These should come from people who are familiar with your nominee&apos;s services.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Letter_Send_Later</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Letter Send Later</shortDescription>
+        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horseguards Road, London SW1A 2HQ.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Letters_of_Support_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Letters of Support Text</shortDescription>
+        <value>Please obtain two or more letters which endorse the nominee’s contribution from people who are familiar with his or her services. Ideally these should be submitted in the final stage of the form but you can log back in and attach them later. Please list below the names of the supporters and select if their letter is to follow.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Login_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Login Label</shortDescription>
+        <value>Login</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Login_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Login Page</shortDescription>
+        <value>HAS_Login_Page</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Login_Page_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Login Page Header</shortDescription>
+        <value>Login or create an account</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Logout_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Logout Label</shortDescription>
+        <value>Logout</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Manage_Account_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Manage Account Label</shortDescription>
+        <value>Manage your account</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Manage_Nominations_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Manage Nominations</shortDescription>
+        <value>Manage your nominations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Minimum_Posts_Error</fullName>
+        <categories>Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Minimum Posts Error</shortDescription>
+        <value>You must add a least one post</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Minimum_Required_Letters_Value</fullName>
+        <categories>Formula Value</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Minimum_Required_Letters_Value</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Minimum_Supporter_Error</fullName>
+        <categories>Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Minimum Supporter Error</shortDescription>
+        <value>You must provide complete details for at least two supporters</value>
+    </labels>
+    <labels>
+        <fullName>HAS_My_Profile_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS My Profile Label</shortDescription>
+        <value>Home</value>
+    </labels>
+    <labels>
+        <fullName>HAS_My_Profile_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS My Profile Page</shortDescription>
+        <value>HAS_Account_Profile</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nationality_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nationality Format Hint</shortDescription>
+        <value>Nominees who are not British citizens can be given an ‘honorary award’.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_New_User_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS New User Label</shortDescription>
+        <value>New user</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Next_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Next Label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>HAS_No_Valid_Registration_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS No Valid Registration Error</shortDescription>
+        <value>No valid registration found</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominate_Instruction</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Nominate Instruction</shortDescription>
+        <value>Please clearly print or type the following details about the person you are nominating. You must ensure that all sections of this form are completed or we will be unable to consider your nominee.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominate_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Nominate Text</shortDescription>
+        <value>I nominate the following person for a UK national honour:</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Complete_Copy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Nomination_Complete_Copy</shortDescription>
+        <value>Go to your account page</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Complete_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Nomination_Complete_Title</shortDescription>
+        <value>Thank you for your nomination.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Complete_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Nomination_Complete_Copy</shortDescription>
+        <value>/</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Completed_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nomination Completed Status</shortDescription>
+        <value>Submitted</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Confidentiality_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Nomination Confidentiality Text</shortDescription>
+        <value>The information contained in this nomination is strictly confidential and will not be communicated to any person other than those involved in the administration of the honours system with the exception of background information provided, which may be used in association with the announcement of any honour granted.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Form</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Nomination_Form</shortDescription>
+        <value>Nomination Form</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Table_Status_Complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nomination Table Status Complete</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Table_Status_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nomination Table Status In Progress</shortDescription>
+        <value>In progress</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nomination_Table_Status_Letters</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Nomination_Table_Status_Letters</shortDescription>
+        <value>Awaiting letters of support</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominator_Disability_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nominator Disability Label</shortDescription>
+        <value>Do you consider yourself to have a disability?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominator_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Nominator Text</shortDescription>
+        <value>Your details</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominee_Disability_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nominee Disability Label</shortDescription>
+        <value>Do you consider your nominee to have a disability?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominee_Nationality</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nominee Nationality label</shortDescription>
+        <value>What is your nominee’s nationality?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Nominee_Relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Nominee Relationship</shortDescription>
+        <value>What is your relationship to the nominee?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Open_Government_Licence_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Open Government Licence URL</shortDescription>
+        <value>https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Optional_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Optional Label</shortDescription>
+        <value>(optional)</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Other_Recognition_Attachments</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Other Recognition Attachments</shortDescription>
+        <value>Attaching supporting documents</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Other_Recognition_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Other Recognition Help Text</shortDescription>
+        <value>Please attach any documents which provide evidence of that recognition (for example, newspaper clippings or letters) at the final stage of the nomination process on the Add Attachments page.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Other_Recognition_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Other Recognition Text</shortDescription>
+        <value>Please list any other ways in which your nominee’s contribution has been recognised. For example, in the media, by awards, by professional/interest groups or through local government.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Page_Reference_Setting_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Page Reference Setting Error</shortDescription>
+        <value>There is an error in custom settings - please contact the HAS team for support</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Partner_Upload_CSV_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Partner Upload CSV Label</shortDescription>
+        <value>Please download the CSV template, paste in details of your partners and then save. You can then upload the complete list.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Partner_Upload_Choice_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Partner Upload Choice Label</shortDescription>
+        <value>If you have a large number of partners you can upload these in a CSV (spreadsheet) file.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Change_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Change Label</shortDescription>
+        <value>Changes to privacy policy</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Change_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Change Text</shortDescription>
+        <value>&lt;p&gt;We reserve the right to revise this privacy policy at any time. If we make any changes to the privacy policy we will place an updated version on this page. By reviewing this page it ensures you are always aware of what information we collect, how we use it and under what circumstances, if any, we will share it with other parties.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Contacting_You_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Contacting You Label</shortDescription>
+        <value>Contacting you</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Contacting_You_Text1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Contacting You Text1</shortDescription>
+        <value>&lt;p&gt;Nominators will receive service emails from the Honours and Appointments Secretariat to the email address that you provide to us. These service emails including:&lt;/p&gt;
+&lt;ul class=&apos;list-bullet&apos;&gt; 
+    &lt;li&gt;Confirmation of setup of your account.&lt;/li&gt;
+    &lt;li&gt;Password reset information when a request has been made to reset the password for your account.&lt;/li&gt;
+    &lt;li&gt;Confirmation of your nomination.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will also contact you by email, telephone or by post if required as part of the administrative activities related to your nomination.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Contacting_You_Text2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Contacting You Text2</shortDescription>
+        <value>&lt;p&gt;We will also contact you by email, telephone or by post if required as part of the Office of Registrar of the Consultant Lobbyists’ activities related to our duty to monitor compliance activities as stipulated in ‘The Act.’&lt;/p&gt;
+&lt;p&gt;You may also receive service emails related to your payment for registration from the payment gateway providers that the Register of Consultant Lobbyists service uses.&lt;/p&gt;
+&lt;p&gt;Your will not receive marketing information from the Office of the Registration of Consultant Lobbyists.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_DPA_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy DPA Label</shortDescription>
+        <value>Data Protection Act 1998</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_DPA_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy DPA Text</shortDescription>
+        <value>&lt;p&gt;The Honours and Nominations Secreteriat complies with the Data Protection Act 1998. It is the data controller of any personal data collected on this website. We will process any data which you provide to us when using this website in accordance with UK data protection legislation.&lt;/p&gt;
+&lt;p&gt;We will process any feedback you give us about this website. We will only use this information to improve this website.&lt;/p&gt;
+&lt;p&gt;We may disclose any data obtained for the purposes for which it was collected and as otherwise permitted under the Data Protection Act 1998. As a data subject, you have the right to ask for a copy of the data and to ask for any inaccuracies to be corrected.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Access_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Access Label</shortDescription>
+        <value>Accessing your information</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Access_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Access Text</shortDescription>
+        <value>&lt;p&gt;You have a right to access a copy of the personal data we hold about you. This is sometimes known as a ‘full access request’. If you would like to make a request to access the personal data we hold about you, please send a £10 fee and a written request to Honours and Appointments Secretariat, 1 Horse Guards Road, London SW1A 2HQ, United Kingdom.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Held_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Held Label</shortDescription>
+        <value>Data held by third parties</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Held_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Held Text</shortDescription>
+        <value>&lt;p&gt;Registration payment information will be held by PCI compliant third party payment gateways used by the Register for Consultant Lobbyist service. These payment gateway providers are RBS Worldpay and Gocardless.com. If we change payment gateway providers we will update the information in this page.&lt;/p&gt;
+&lt;p&gt;We do not share your personal data with third parties for commercial or marketing purposes.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Held_Where_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Held Where Label</shortDescription>
+        <value>Where your data is held and for how long</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Policy_Data_Held_Where_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Policy Data Held Where Text</shortDescription>
+        <value>&lt;p&gt;The system holding nomination data is location in the UK and is reviewed in accordance with agreed Government standards.&lt;/p&gt;
+&lt;p&gt;We keep the data as long as is appropriate to do so and these will be published as a record to which the public has access.&lt;/p&gt;
+&lt;p&gt;We keep our data retention periods under review and will update this section should we make changes.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Date_End_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Date End Label</shortDescription>
+        <value>End date</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Date_From_To_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Date From To Label</shortDescription>
+        <value>Please give dates of when this post was held. If you don&apos;t know the exact dates, please estimate.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Date_Start_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Date Start Label</shortDescription>
+        <value>Start date</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Form_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Form Text</shortDescription>
+        <value>Please add details for a post that you know the nominee has held.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Form_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Form Title</shortDescription>
+        <value>Add a post</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Name Label</shortDescription>
+        <value>Name of the post</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Nominal_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Nominal Format Hint</shortDescription>
+        <value>e.g. MBE, FRS</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Post_Position_Status_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Post Position Status Label</shortDescription>
+        <value>Was this post paid or unpaid?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Posts_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Posts Help Text</shortDescription>
+        <value>&lt;ul class=&quot;list list-bullet&quot; &gt;
+            &lt;li&gt;If you do not know exact dates, please estimate the period of time.&lt;/li&gt;
+            &lt;li&gt;Please state if the post was paid or unpaid or you do not know.&lt;/li&gt;
+            &lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Posts_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Posts Label</shortDescription>
+        <value>Please list the post(s), with start and end dates, in which the nominee has excelled.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Posts_Page_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Posts Page Status</shortDescription>
+        <value>Nominee Posts</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Posts_Page_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Posts Page Text</shortDescription>
+        <value>Tell us the posts your nominee has held which support their nomination. For example: Charity fund raiser, 2012-2016.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Posts_Page_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Posts Page Title</shortDescription>
+        <value>Posts the nominee has held</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Previous_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Previous Label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Previous_Returns_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Previous Returns Label</shortDescription>
+        <value>See previous returns</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_How_We_Use_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy How We Use Label</shortDescription>
+        <value>How we use your information</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_How_We_Use_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy How We Use Text</shortDescription>
+        <value>&lt;p&gt;We use data in the following ways:&lt;/p&gt;
+&lt;ul class=&apos;list-bullet&apos;&gt;
+    &lt;li&gt;So various government departments can &lt;a href=&apos;https://www.gov.uk/government/publications/honours-system-checks-on-candidates&apos;&gt;check all nominees&lt;/a&gt; to make sure they’re suitable for an honour. This may include checks by HM Revenue and Customs (HMRC).&lt;/li&gt;
+    &lt;li&gt;So the &lt;a href=&apos;https://www.gov.uk/honours-committees&apos;&gt;honours committee&lt;a&gt; can review all nominations and decide on the honours to be awarded.&lt;/li&gt;
+    &lt;li&gt;To publish the announcement of any honour granted.&lt;/li&gt;
+    &lt;li&gt;To make improvements to the content and usability of the website.&lt;/li&gt;
+&lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy Label</shortDescription>
+        <value>Privacy policy</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy Page</shortDescription>
+        <value>HAS_Privacy_Page</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_Policy_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy Policy Text</shortDescription>
+        <value>&lt;p&gt;The Office of Honours and Nominations (‘we’) work for the Registrar in the implementation of The Transparency of Lobbying, Non-Party Campaigning and Trade Union Administration Act 2014 Part 1 (‘The Act’).&lt;/p&gt;
+&lt;p&gt;The Register of Consultant Lobbyists (‘the website’) is the instantiation of ‘The Register’ as defined by The Act.&lt;/p&gt;
+&lt;p&gt; Users of the service fall into two groups - registrants who are required to submit data and viewers of the published register.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_When_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy When Label</shortDescription>
+        <value>When we collect your data</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Privacy_When_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Privacy When Text</shortDescription>
+        <value>&lt;p&gt;
+                The Honours and Appointment Secretariat collects your data through the website when you setup an account to nominate someone, save an incomplete nomination form or submit a complete nomination form.
+                &lt;/p&gt;
+                &lt;p&gt;
+                We collect anonymous site usage information including quantitative data for both registered users and non registered users browsing all publicly available web pages.
+                &lt;/p&gt;
+                &lt;p&gt;
+                We also keep a record of inbound and outbound communications with registrants through other channels including email, post and telephone. These records include nominations not done through the website.
+                &lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Quarterly_Return_Page_Strapline</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Quarterly Return Page Strapline</shortDescription>
+        <value>As part of your quarterly return, you need to submit the names of the paying clients on whose behalf you have conducted the business of consultant lobbying. Only enter a client once even if you communicated with them multiple times in the same quarter.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_RCL_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS RCL Label</shortDescription>
+        <value>Honours nominations</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Recommendation_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Recommendation Help Text</shortDescription>
+        <value>We are looking for people with exemplary service, who: 
+            &lt;ul class=&quot;list list-bullet&quot; &gt;
+            &lt;li&gt;have changed things, with an emphasis on practical achievement;&lt;/li&gt;
+            &lt;li&gt;have demonstrated innovation and entrepreneurship; &lt;/li&gt;
+            &lt;li&gt;are examples of the best sustained and selfless voluntary service;&lt;/li&gt;
+            &lt;li&gt;have delivered in a way that has brought distinction to UK life.&lt;/li&gt;
+            &lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Recommendation_Important_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Recommendation Important Text</shortDescription>
+        <value>It is important that you give as much detail as possible about what your nominee has achieved which makes them stand out against others and make it clear if the achievement is in one area or in a number of different areas.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Recommendation_Leader_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Recommendation Leader Text</shortDescription>
+        <value>Tell us how your nominee has made a significant contribution in their area of activity. We are looking for people who: &lt;ul class=&quot;list list-bullet&quot;&gt; &lt;li&gt;have changed things, with an emphasis on practical achievement&lt;/li&gt; &lt;li&gt;have demonstrated innovation and entrepreneurship&lt;/li&gt; &lt;li&gt;are examples of the best sustained and selfless voluntary service&lt;/li&gt; &lt;li&gt;have delivered in a way that has brought distinction to UK life&lt;/li&gt; &lt;/ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Recommendation_Summary_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Recommendation Summary Label</shortDescription>
+        <value>Give a brief description of the service you think your nominee should receive an honour for (maximum 20 words).</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Reference_Number_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Reference Number Label</shortDescription>
+        <value>Reference Number:</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Register</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Register</shortDescription>
+        <value>Register</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Register_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Register Button</shortDescription>
+        <value>Create account</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Registration_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Registration Label</shortDescription>
+        <value>Registration details</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Registration_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Registration Page</shortDescription>
+        <value>HAS_Registration_Page</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Renew_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Renew Label</shortDescription>
+        <value>Renew</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Renewal_Processed_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Renewal Processed Message</shortDescription>
+        <value>Your renewal is being processed and may take up to four working days to be made public. You will receive an email to confirm when your registration is made public.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Renewal_Registration_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Renewal Registration Status</shortDescription>
+        <value>Renewal Due</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Reset_Password_Page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Reset Password Page</shortDescription>
+        <value>HAS_ChangePassword</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Return_Step_Param</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Return_Step_Param</shortDescription>
+        <value>returnsStep</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Review_Page_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Review Page URL</shortDescription>
+        <value>/has_formpage21</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Salutation_Format_Hint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Salutation Format Hint</shortDescription>
+        <value>Mr, Mrs, Miss, Ms, Dr, Rev, etc.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Save_And_Continue_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Save And Continue Label</shortDescription>
+        <value>Save and continue</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Save_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Save Label</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Send_Nomination</fullName>
+        <categories>Form Button</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Send Nomination</shortDescription>
+        <value>I accept - send my nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Similar_Service_Question</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Similar Service Question</shortDescription>
+        <value>Are there others giving a similar service to that of the nominee?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Site_Registration_Assitance_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Site Registration Assitance Text</shortDescription>
+        <value>If you have not received an email or you are having problems then please contact &lt;a href=&quot;mailto:[emailaddress]?subject=Honours and Appointments Secretariat - Registration Assistance&quot; &gt;[emailaddress]&lt;/a&gt; for further support.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Site_Registration_Email_Notification_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Site Registration Email Notification Text</shortDescription>
+        <value>You have been sent an email with a link to complete your account set up.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Site_Registration_Thankyou_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Site Registration Thankyou Text</shortDescription>
+        <value>Thank you for creating an account for your honours nomination.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Specify_Nominator_Ethnicity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Specify Nominator Ethnicity</shortDescription>
+        <value>Which ethnic group do you identify with?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Specify_Nominee_Ethnicity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Specify Nominee Ethnicity</shortDescription>
+        <value>Which ethnic group does your nominee identify with?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Standard_Page_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Standard Page Error</shortDescription>
+        <value>There has been a problem saving your nomination, please check the fields and try again.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Standout_Contribution_Question</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Standout Contribution Question</shortDescription>
+        <value>If so, please tell us what makes the nominee and their contribution stand out from such people?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Standout_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Standout Label</shortDescription>
+        <value>If yes, please tell us what makes your nominee and their contribution stand out from other people.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Submission_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Submission Text</shortDescription>
+        <value>By submitting this nomination you declare that the information you have provided is – to the best of your knowledge – accurate and complete. Providing false information may lead to your nominee being removed from consideration for an honour.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Submit_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Submit Label</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Submitting_Letter_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Submitting Letter Header</shortDescription>
+        <value>Submitting a letter?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Date_Knew_From_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Date Knew From Label</shortDescription>
+        <value>Knew from</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Date_Knew_Until_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Date Knew Until Label</shortDescription>
+        <value>Knew until</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Dates_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Dates Label</shortDescription>
+        <value>How long has the supporter known the nominee?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Name Label</shortDescription>
+        <value>Name of supporter</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Providing_Letter_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Providing Letter Label</shortDescription>
+        <value>Letter of support</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Relationship_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Relationship Header</shortDescription>
+        <value>Supporter relationship &lt;br /&gt;&lt;span class=&quot;text-secondary&quot;&gt;i.e colleague, friend&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporter_Relationship_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporter Relationship Label</shortDescription>
+        <value>Relationship to nominee</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporters_Form_Help_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporters Form Help text</shortDescription>
+        <value>Please give dates, if known. For example: 2012 to 2016.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Supporters_Page_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Supporters Page Status</shortDescription>
+        <value>Nominee Supporters</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Telephone_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Telephone_Label</shortDescription>
+        <value>Telephone number</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Telephone_Number_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Telephone Number Label</shortDescription>
+        <value>Phone number</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Thank_You_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HAS Thank You Message</shortDescription>
+        <value>Thank you for making the effort to nominate someone for an honour. We know that forms can be daunting. These guidance notes are intended to make it a bit simpler, but if you’re not sure about any part of the process, please don’t be discouraged: just give us a ring on 020 7276 2777 and we’ll do our best to help.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Create_Failed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Create Failed</shortDescription>
+        <value>We are unable to complete your registration at this time.
+It might be that you have already registered your email address. Please either login or register using a different email address.
+Please retry, and if you are still experiencing issues please contact the Office for the Registrar of Consultant Lobbyists at &lt;a href=&quot;mailto:[emailAddress]?subject=Nominations and Honours Secretariat - Registration Issues&quot; &gt;[emailAddress]&lt;/a&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Email_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Email Help Text</shortDescription>
+        <value>This will also be your username</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Firstname_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Firstname Help Text</shortDescription>
+        <value>[ignore]</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Lastname_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Lastname Help Text</shortDescription>
+        <value>[ignore]</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Phone_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Phone Help Text</shortDescription>
+        <value>[ignore]</value>
+    </labels>
+    <labels>
+        <fullName>HAS_User_Salutation_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS User Salutation Help Text</shortDescription>
+        <value>[ignore]</value>
+    </labels>
+    <labels>
+        <fullName>HAS_View_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS View Label</shortDescription>
+        <value>View</value>
+    </labels>
+    <labels>
+        <fullName>HAS_View_Nomination_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS View Nomination Button</shortDescription>
+        <value>View nomination</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Website_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Website_Label</shortDescription>
+        <value>Website details</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Your_Details_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Your Details Help Text</shortDescription>
+        <value>These details allow you to create and manage your nominations and will not be displayed publicly.</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Your_Details_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Your Details Label</shortDescription>
+        <value>Your details</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Your_Nationality</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Your Nationality label</shortDescription>
+        <value>What is your nationality?</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Your_Nationality_Selfdefined_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Your Nationality Selfdefined Label</shortDescription>
+        <value>Your nationality</value>
+    </labels>
+</CustomLabels>

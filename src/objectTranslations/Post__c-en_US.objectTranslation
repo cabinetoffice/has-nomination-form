@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Post</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Posts</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nomination --></label>
+        <name>Nomination_Id__c</name>
+        <relationshipLabel><!-- Posts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Position Status --></label>
+        <name>Position_Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Known</masterLabel>
+            <translation><!-- Not Known --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid</masterLabel>
+            <translation><!-- Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unpaid</masterLabel>
+            <translation><!-- Unpaid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date to End Date --></label>
+        <name>Start_Date_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

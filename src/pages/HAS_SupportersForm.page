@@ -1,0 +1,82 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Supporter__c" extensions="bg_HAS_SupportersFormController">
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+               <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+            <apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home">
+                    <apex:form styleClass="main">
+
+                        <h1 class="heading-medium">
+                            <apex:outputLabel value="{!$Label.HAS_Add_Supporter_Title}"/>
+                        </h1>
+
+                        <apex:inputHidden value="{!Supporter__c.Nomination_Id__c}" />
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Supporter_Name_Label}">
+                              <apex:inputField value="{!Supporter__c.Name}" styleClass="form-control inputText" required="TRUE" />
+                            </apex:outputLabel>
+                        </apex:outputPanel>
+
+                    <div class="form-group">
+                        <apex:outputText escape="false" styleClass="form-label" value="{!$Label.HAS_Supporter_Dates_Label}" />
+                        <apex:outputText escape="false" styleClass="text-secondary" value="{!$Label.HAS_Supporters_Form_Help_text}" />
+                    </div>
+
+                      <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Supporter_Date_Knew_From_Label}" />
+                            <apex:inputField type="text" value="{!Supporter__c.Knew_From__c}" styleClass="form-control" required="FALSE" />
+                      </apex:outputPanel>
+
+                        <apex:outputPanel styleClass="form-group" layout="block">
+                            <apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Supporter_Date_Knew_Until_Label}" />
+                            <apex:inputField type="text" value="{!Supporter__c.Knew_Until__c}" styleClass="form-control" required="FALSE"/>
+                      </apex:outputPanel>
+
+						<apex:outputPanel styleClass="form-group" layout="block">
+								<apex:outputLabel escape="false" styleClass="form-label" value="{!$Label.HAS_Supporter_Relationship_Label}">
+								<apex:inputField value="{!Supporter__c.Relationship__c}" styleClass="form-control inputText" required="TRUE" />
+							</apex:outputLabel>
+						</apex:outputPanel>
+
+                      <apex:outputPanel styleClass="formGroup" layout="block">
+                          <apex:commandButton styleClass="clrButton" action="{!saveSupporter}" value="{!$Label.HAS_Save_Label}" id="saveSupporter"/>
+                          <apex:commandLink action="{!cancelSupporter}" value="{!$Label.HAS_Cancel_Label}" immediate="TRUE" id="cancelSupporter"/>
+                      </apex:outputPanel>
+
+                    </apex:form>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <script type="text/javascript" charset="utf-8">
+
+                jQuery(document).ready(function($)
+                {
+                    $("[makeReadOnly='true']").attr('disabled', 'disabled');
+                });
+            </script>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

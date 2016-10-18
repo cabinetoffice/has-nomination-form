@@ -1,0 +1,42 @@
+<apex:component >
+    <apex:attribute name="formId" description="The id to be associated to the element" type="String" required="true" />
+    <apex:attribute name="formLabel" description="The form label" type="String" required="true" />
+    <apex:attribute name="formCurrentValue" description="The currently selected value to be populated by this component " type="String" required="true" />
+    <apex:attribute name="formOptions" description="The options to be rendered by this component " type="SelectOption[]" required="true" />
+    <apex:attribute name="isRequired" description="Sets the radio button group to required if true" type="Boolean" />
+    <apex:attribute name="formAction" description="The JSFunction to call on option selection" type="String" />
+    <apex:attribute name="formHintText" description="The forms hint text " type="String" />
+    <apex:attribute name="formPDLabel" description="The forms Progresive Disclosure Label " type="String" />
+    <apex:attribute name="formPDText" description="The forms Progresive Disclosure text " type="String" />
+    <apex:attribute name="makeReadOnly" description="This will make the component output a single output field marked as read only for the selected option" type="Boolean"/>
+
+
+    <apex:outputLabel styleClass="form-label" value="{!formLabel}" for="{!formId}_inuput" />
+    <apex:outputPanel rendered="{!formHintText != ''}" >
+        <p class="text-secondary">
+            <apex:outputText value="{!formHintText}" />
+        </p>
+    </apex:outputPanel> 
+    <c:HAS_ProgressiveDisclosure formPDLabel="{!formPDLabel}" formPDText="{!formPDText}" />
+
+    <fieldset id="{!formId}_input" class="inline">
+        <apex:repeat value="{!formOptions}" var="formOption">
+            <label styleClass="form-label-bold" class="block-label {!if(formOption.Value == formCurrentValue, 'selected', '')}" for="input{!formId}{!formOption.Value}" style="display: {!IF(makeReadOnly, 'none;','')}">
+                <apex:outputPanel rendered="{!formOption.Value == formCurrentValue && !makeReadOnly}" >
+                    <input id="input{!formId}{!formOption.Value}" type="radio" name="radio-inline-group-{!formId}" value="{!formOption.Value}" onclick="{!formAction}('{!formOption.Value}');" checked="true" required="{!isRequired}" >
+                        {!formOption.Label}
+                    </input>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!formOption.Value != formCurrentValue && !makeReadOnly}" >
+                    <input id="input{!formId}{!formOption.Value}" type="radio" name="radio-inline-group-{!formId}" value="{!formOption.Value}" onclick="{!formAction}('{!formOption.Value}');" required="{!isRequired}" >
+                        {!formOption.Label}
+                    </input>
+                </apex:outputPanel>
+            </label>
+            <apex:outputPanel rendered="{!formOption.Value == formCurrentValue && makeReadOnly}" >
+                <input id="input{!formId}{!formOption.Value}" type="text" name="radio-inline-group-{!formId}" value="{!formOption.Value}" disabled="disabled" >
+                </input>
+            </apex:outputPanel>
+        </apex:repeat>
+    </fieldset>
+</apex:component>

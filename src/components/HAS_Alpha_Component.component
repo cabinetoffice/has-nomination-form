@@ -1,0 +1,8 @@
+<apex:component >
+    <div id="phase-banner" class="phase-banner phase-banner-alpha">
+        <p>
+            <strong class="phase-tag">ALPHA</strong> This is an <a href="http://www.gov.uk/help/alpha">alpha service</a>  – please send your feedback to  <a href="mailto:{!$Label.HAS_Feedback_Email}?subject={!$Label.HAS_Email_Feedback_Subject}" title="Please send feedback to {!$Label.HAS_Feedback_Email}">{!$Label.HAS_Feedback_Email}</a>
+        </p> 
+    
+    </div>
+</apex:component>

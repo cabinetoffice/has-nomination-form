@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a new Custom object created for the HAS Form Implementation. It&apos;s purpose is to hold details of supports who are supporting an application. It will be a child object in a master detail relationship with the Case object.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Supporters</fullName>
+        <description>Used in the Visualforce form to view the details of added supporters</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Knew_From__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Knew_Until__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Relationship__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Supporters</label>
+    </fieldSets>
+    <fields>
+        <fullName>Knew_From_Knew_Until__c</fullName>
+        <description>Shows the date span Knew From to Knew Until for surfacing in the Visual Force supporters table.</description>
+        <externalId>false</externalId>
+        <formula>Knew_From__c &amp; &quot; to &quot; &amp; Knew_Until__c</formula>
+        <label>Knew From to Knew Until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Knew_From__c</fullName>
+        <description>This is a new field for the HAS Form implementation. It is used to store a date indicating when the support first met the Nominee</description>
+        <externalId>false</externalId>
+        <label>Knew From</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Knew_Until__c</fullName>
+        <description>This is a new field for the HAS Form implementation. It is used to store a date indicating when the supporter ceased to know the Nominee</description>
+        <externalId>false</externalId>
+        <label>Knew Until</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Letter_Submitted__c</fullName>
+        <description>This is a field for the HAS Form. It will be used to indicate if the supporter has uploaded a letter of support as an attachment or whether they plan to at a later date</description>
+        <externalId>false</externalId>
+        <label>Letter Submitted</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No, I&apos;ll Submit Later</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Nomination_Id__c</fullName>
+        <description>This field is a master detail lookup to the case object. It represents the relationship where a supporter record belongs to a Nomination</description>
+        <externalId>false</externalId>
+        <label>Nomination Id</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Supporters</relationshipLabel>
+        <relationshipName>Supporters</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Relationship__c</fullName>
+        <description>This is a new field created for the HAS Form. It will be used to store the relationship of the supporter to the Nominee</description>
+        <externalId>false</externalId>
+        <label>Relationship</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Supporter</label>
+    <nameField>
+        <label>Supporter Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Supporters</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

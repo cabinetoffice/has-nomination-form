@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Supporter</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Supporters</value>
+    </caseValues>
+    <fields>
+        <label><!-- Knew From to Knew Until --></label>
+        <name>Knew_From_Knew_Until__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knew From --></label>
+        <name>Knew_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knew Until --></label>
+        <name>Knew_Until__c</name>
+    </fields>
+    <fields>
+        <label><!-- Letter Submitted --></label>
+        <name>Letter_Submitted__c</name>
+        <picklistValues>
+            <masterLabel>No, I&apos;ll Submit Later</masterLabel>
+            <translation><!-- No, I&apos;ll Submit Later --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nomination Id --></label>
+        <name>Nomination_Id__c</name>
+        <relationshipLabel><!-- Supporters --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relationship --></label>
+        <name>Relationship__c</name>
+    </fields>
+    <layouts>
+        <layout>Supporter Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

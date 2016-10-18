@@ -1,0 +1,73 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationNomineeExtension">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+	            	<apex:outputPanel layout="block" styleClass="inner">
+
+	                <apex:outputPanel layout="block" id="content" styleClass="home">
+
+	                <h1 class="heading-medium">
+	                    <apex:outputText value="{!$Label.HAS_Form_Page_6_Title}" />
+	                </h1>
+
+	                    <apex:outputPanel id="nomineeDetailsInput">
+	                        <apex:form id="nomineeForm">
+
+	                            <apex:outputPanel layout="block" styleClass="form-group">
+	                                <apex:outputLabel styleClass="form-label" value="{!$Label.HAS_Telephone_Number_Label}" for="NomineePhone" />
+									<p class="text-secondary">{!$Label.HAS_If_Known_Format_Hint}</p>
+									<apex:inputField styleClass="form-control" value="{!nominee.Phone}" id="NomineePhone" required="FALSE" html-makeReadOnly="{!readOnlyMode}" />
+	                            </apex:outputPanel>
+
+	                            <apex:outputPanel layout="block" styleClass="form-group">
+	                                <apex:outputLabel styleClass="form-label" value="{!$Label.HAS_Form_Email_Address_Label}" for="Email" />
+									<p class="text-secondary">{!$Label.HAS_If_Known_Format_Hint}</p>
+									<apex:inputField styleClass="form-control" value="{!nominee.Email}" id="Email" required="FALSE" html-makeReadOnly="{!readOnlyMode}" />
+	                            </apex:outputPanel>
+
+	                            <apex:outputPanel layout="block" styleClass="form-group">
+	                                <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep6" rendered="{!!readOnlyMode}" />
+	                                <br />
+	                                <br />
+	                                <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep6" immediate="TRUE"/>
+
+	                            </apex:outputPanel>
+
+	                        </apex:form>
+	                   </apex:outputPanel>
+
+	                </apex:outputPanel>
+	            </apex:outputPanel>
+			</div>
+		</div>
+        </apex:define>
+    </apex:composition>
+
+</apex:page>

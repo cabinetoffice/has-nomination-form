@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nomination</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Nominations</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Nomination Reference</value>
+        </caseValues>
+        <name>case_number</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Benefits Details --></label>
+        <name>Benefits_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drafting Service Used --></label>
+        <name>Drafting_Service_Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Evidence Option --></label>
+        <name>Evidence_Option__c</name>
+        <picklistValues>
+            <masterLabel>No, I will send them later</masterLabel>
+            <translation><!-- No, I will send them later --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I am ready to attach them</masterLabel>
+            <translation><!-- Yes, I am ready to attach them --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Letters of Support Received Offline --></label>
+        <name>Letters_Of_Support_Received_Offline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Letters of Support Option --></label>
+        <name>Letters_of_Support_Option__c</name>
+        <picklistValues>
+            <masterLabel>No, I will send them later</masterLabel>
+            <translation><!-- No, I will send them later --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I am ready to attach them</masterLabel>
+            <translation><!-- Yes, I am ready to attach them --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Letters of Support Outstanding --></label>
+        <name>Letters_of_Support_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help><!-- Count of Supporters who still need to provide a Letter of Support --></help>
+        <label><!-- Letters of Support Required --></label>
+        <name>Letters_of_Support_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Letters of Support Uploaded --></label>
+        <name>Letters_of_Support_Uploaded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominator --></label>
+        <name>Nominator__c</name>
+        <relationshipLabel><!-- Nominator Id --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nominee Name --></label>
+        <name>Nominee_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominee --></label>
+        <name>Nominee__c</name>
+        <relationshipLabel><!-- Nominee Id --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Posts Added --></label>
+        <name>Number_Of_Posts_Added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Supporters Added --></label>
+        <name>Number_of_Supports_Added__c</name>
+    </fields>
+    <fields>
+        <name>Origin</name>
+        <picklistValues>
+            <masterLabel>Chatter Answers</masterLabel>
+            <translation><!-- Chatter Answers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>Origin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Recognition --></label>
+        <name>Other_Recognition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Others In Post --></label>
+        <name>Others_In_Post__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Post Details --></label>
+        <name>Post_Details__c</name>
+    </fields>
+    <fields>
+        <name>Priority</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Progress Status --></label>
+        <name>Progress_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>Progress__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting Letters of Support</masterLabel>
+            <translation><!-- Awaiting Letters of Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equality Monitoring</masterLabel>
+            <translation><!-- Equality Monitoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominator Address</masterLabel>
+            <translation><!-- Nominator Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominator Contact Details</masterLabel>
+            <translation><!-- Nominator Contact Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominator Name</masterLabel>
+            <translation><!-- Nominator Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominator Supporter Letters Options</masterLabel>
+            <translation><!-- Nominator Supporter Letters Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Address</masterLabel>
+            <translation><!-- Nominee Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Contact Details</masterLabel>
+            <translation><!-- Nominee Contact Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee DoB or Age</masterLabel>
+            <translation><!-- Nominee DoB or Age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Evidence Options</masterLabel>
+            <translation><!-- Nominee Evidence Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Impact Statement</masterLabel>
+            <translation><!-- Nominee Impact Statement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Name</masterLabel>
+            <translation><!-- Nominee Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Nationality</masterLabel>
+            <translation><!-- Nominee Nationality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Other Awards/Recognition</masterLabel>
+            <translation><!-- Nominee Other Awards/Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Posts</masterLabel>
+            <translation><!-- Nominee Posts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Similar Service</masterLabel>
+            <translation><!-- Nominee Similar Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee Supporters</masterLabel>
+            <translation><!-- Nominee Supporters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nominee service</masterLabel>
+            <translation><!-- Nominee service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationship to Nominee</masterLabel>
+            <translation><!-- Relationship to Nominee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewing Nomination</masterLabel>
+            <translation><!-- Reviewing Nomination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Reason</name>
+        <picklistValues>
+            <masterLabel>Complex functionality</masterLabel>
+            <translation><!-- Complex functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing problem</masterLabel>
+            <translation><!-- Existing problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructions not clear</masterLabel>
+            <translation><!-- Instructions not clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New problem</masterLabel>
+            <translation><!-- New problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User didn&apos;t attend training</masterLabel>
+            <translation><!-- User didn&apos;t attend training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- For example services to disabled people in Rochdale or services to the community in Aberporth. --></help>
+        <label><!-- Recommendation summary --></label>
+        <name>Recommendation_summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- For example: son, friend, colleague --></help>
+        <label><!-- Relationship of nominator to nominee --></label>
+        <name>Relationship_Nominator_to_Nominee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standout Details --></label>
+        <name>Standout_Details__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Sample Cases</masterLabel>
+            <translation><!-- Sample Cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Case Feed Layout</layout>
+        <layoutType>CaseInteraction</layoutType>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Nominee details --></label>
+            <section>Nominee details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Converted: Case Feed Layout</layout>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must provide details for at least 2 supporters --></errorMessage>
+        <name>HAS_Form_Enforce_number_of_supporters</name>
+    </validationRules>
+</CustomObjectTranslation>

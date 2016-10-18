@@ -1,0 +1,69 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" controller="bg_CookiePageController">
+
+    <apex:composition template="{!$Site.Template}">
+    <apex:define name="title">
+        <title>{!$Label.HAS_Label}</title>
+    </apex:define>
+
+    <apex:define name="header-proposition">
+        <nav>
+            <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+        </nav>
+    </apex:define>
+
+         <apex:define name="global-breadcrumb">
+            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+               <li><strong>{!$Label.HAS_Cookies_Label}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageHeader" >
+            <c:HAS_Page_Header header="{!$Label.HAS_Cookies_Label}" strapline="" paragraph="{!$Label.HAS_Cookies_Description}" />
+        </apex:define>
+
+        <apex:define name="mainContent">
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                    <apex:outputPanel layout="block" styleClass="inner">
+                        <apex:outputPanel layout="block" id="content" styleClass="home" >
+                            <apex:outputPanel layout="block" styleClass="form-group"  >
+                                <h2 class="heading-large">{!$Label.HAS_Cookies_Intro_Message_Label}</h2>
+                                <apex:outputText value="{!$Label.HAS_Cookies_Intro_Message_Text}" />
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="block" styleClass="form-group"  >
+                                <apex:dataTable id="CookiesTable" styleClass="clrDataTable" value="{!CookiesHAS}" var="HASCookie">
+                                    <apex:column value="{!HASCookie.CookieName}" >
+                                        <apex:facet name="header">{!$Label.HAS_Cookies_Name_Label}</apex:facet>
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header">{!$Label.HAS_Cookies_Purpose_Label}</apex:facet>
+                                        <apex:outputText value="{!HASCookie.Description}" escape="false" />
+                                    </apex:column>
+                                    <apex:column value="{!HASCookie.Expires}">
+                                        <apex:facet name="header">{!$Label.HAS_Cookies_Expires_Label}</apex:facet>
+                                    </apex:column>
+                                </apex:dataTable>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="block" styleClass="form-group"  >
+                                <br />
+                                <h2 class="heading-large">{!$Label.HAS_Cookies_Salesforce_Label}</h2>
+                                <apex:outputText value="{!$Label.HAS_Cookies_Salesforce_Text}" />
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="block" styleClass="form-group"  >
+                                <apex:dataTable id="sfdcCookiesTable" styleClass="clrDataTable" value="{!CookiesSFDC}" var="sfdcCookie">
+                                    <apex:column value="{!sfdcCookie.CookieName}" >
+                                        <apex:facet name="header">{!$Label.HAS_Cookies_Salesforce_Cookies_Label}</apex:facet>
+                                    </apex:column>
+                                    <apex:column >
+                                        <apex:facet name="header">{!$Label.HAS_Cookies_Salesforce_Description_Label}</apex:facet>
+                                        <apex:outputText value="{!sfdcCookie.Description}" escape="false" />
+                                    </apex:column>
+                                </apex:dataTable>
+                            </apex:outputPanel>
+
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

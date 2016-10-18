@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fieldSets>
+        <fullName>Nomination_List</fullName>
+        <description>For listing nominations on the Account Profile community page</description>
+        <displayedFields>
+            <field>Nominee_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Progress_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Nomination List</label>
+    </fieldSets>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Benefits_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefits Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>CommunityId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Drafting_Service_Used__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The Cabinet Office does not endorse the use of fee-charging drafting services when completing this form. Please tell us if you have made use of such a service by ticking here.</description>
+        <externalId>false</externalId>
+        <label>Drafting Service Used</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Evidence_Option__c</fullName>
+        <description>Will evidence be attached to this submission.</description>
+        <externalId>false</externalId>
+        <label>Evidence Option</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes, I am ready to attach them</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No, I will send them later</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsSelfServiceClosed</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Letters_Of_Support_Received_Offline__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if all of the letters of support have been received via email or post. This will update the status of the nomination on the account profile page.</description>
+        <externalId>false</externalId>
+        <label>Letters of Support Received Offline</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Letters_of_Support_Option__c</fullName>
+        <description>Nominee&apos;s preference for how letters of support will be provided.</description>
+        <externalId>false</externalId>
+        <label>Letters of Support Option</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes, I am ready to attach them</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No, I will send them later</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Letters_of_Support_Outstanding__c</fullName>
+        <description>The number of letters that will need to be uploaded to meet the minimum requirement for submission.</description>
+        <externalId>false</externalId>
+        <formula>IF(OR(VALUE($Label.HAS_Minimum_Required_Letters_Value) &lt;= Letters_of_Support_Uploaded__c, Letters_Of_Support_Received_Offline__c = true), 0, VALUE($Label.HAS_Minimum_Required_Letters_Value) - Letters_of_Support_Uploaded__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Letters of Support Outstanding</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Letters_of_Support_Required__c</fullName>
+        <description>This is a new field created as part of the HAS Form Implementation. It is being used to count how many child support records have the check box &apos;letters to follow&apos; set to true</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Count of Supporters who still need to provide a Letter of Support</inlineHelpText>
+        <label>Letters of Support Required</label>
+        <summaryFilterItems>
+            <field>Supporter__c.Letter_Submitted__c</field>
+            <operation>notEqual</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Supporter__c.Nomination_Id__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Letters_of_Support_Uploaded__c</fullName>
+        <description>A total of letters uploaded via the nomination form.</description>
+        <externalId>false</externalId>
+        <label>Letters of Support Uploaded</label>
+        <summaryFilterItems>
+            <field>Nomination_Attachment__c.Attachment_Type__c</field>
+            <operation>equals</operation>
+            <value>Supporting letter</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Nomination_Attachment__c.Nomination__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Nominator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is a lookup to the Contact Object. It represents a Nominator for a HAS Form Submission</description>
+        <externalId>false</externalId>
+        <label>Nominator</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Nominator Id</relationshipLabel>
+        <relationshipName>NominatorID</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Nominee_Name__c</fullName>
+        <description>This is a new field as part of the HAS Implementation. This outputs the associated Nominee contact&apos;s First name and Last name</description>
+        <externalId>false</externalId>
+        <formula>Nominee__r.FirstName+&apos; &apos;+Nominee__r.LastName</formula>
+        <label>Nominee Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nominee__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is a lookup to the Contact object. It represents a Nominee on a HAS form Submission</description>
+        <externalId>false</externalId>
+        <label>Nominee</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Nominee Id</relationshipLabel>
+        <relationshipName>NomineeId</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Posts_Added__c</fullName>
+        <description>A total of the number of posts the nominee has held.</description>
+        <externalId>false</externalId>
+        <label>Number of Posts Added</label>
+        <summaryForeignKey>Post__c.Nomination_Id__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Supports_Added__c</fullName>
+        <description>This is a new field added as part of the HAS Implementation. This counts up how many support records have been associated with the case record. It will be used in a Validation rule to ensure that at least 2 supporters are added</description>
+        <externalId>false</externalId>
+        <label>Number of Supporters Added</label>
+        <summaryForeignKey>Supporter__c.Nomination_Id__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter Answers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Origin__c</fullName>
+        <description>This is part of the HAS Implementation. This is being used to hold the Nominee&apos;s Country of Origin</description>
+        <externalId>false</externalId>
+        <label>Origin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Recognition__c</fullName>
+        <description>This is part of the HAS Form Implementation. The field is used to hold information relating to any other recognitions the Nominee might have.</description>
+        <externalId>false</externalId>
+        <label>Other Recognition</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Others_In_Post__c</fullName>
+        <description>This is used as part of the HAS Form Implementation. It is used for the Nominator to state whether there are any other people in the same post as the nominator. If the answer is yes and the Standout details field is empty, then a validation rule should be triggered.</description>
+        <externalId>false</externalId>
+        <label>Others In Post</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Post_Details__c</fullName>
+        <description>This is a field to be used as Part of the HAS Form Implementation. It is being used to store the details of the posts the Nominee has held</description>
+        <externalId>false</externalId>
+        <label>Post Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Progress_Status__c</fullName>
+        <description>Used in the Account VF page to show the status of a nomination</description>
+        <externalId>false</externalId>
+        <formula>IF(
+NOT(ISPICKVAL(Progress__c,&quot;Submitted&quot;)),$Label.HAS_Nomination_Table_Status_In_Progress,
+IF(
+OR(Letters_Of_Support_Received_Offline__c = True, Letters_of_Support_Uploaded__c &gt;= 2),
+$Label.HAS_Nomination_Table_Status_Complete,$Label.HAS_Nomination_Table_Status_Letters
+)
+)</formula>
+        <label>Progress Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Progress__c</fullName>
+        <description>This is used as part of the HAS Form Implementation. It is used to indicate a Nominator&apos;s progress through their submission. The value chosen from this list, drives where the user will pick back up if they log in to continue their form submission</description>
+        <externalId>false</externalId>
+        <label>Progress</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Awaiting Letters of Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominator Name</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominator Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominator Contact Details</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Name</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Contact Details</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee DoB or Age</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Nationality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship to Nominee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Posts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Impact Statement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Similar Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Other Awards/Recognition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Evidence Options</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominee Supporters</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nominator Supporter Letters Options</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equality Monitoring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reviewing Nomination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>QuestionId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>User didn&apos;t attend training</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New problem</fullName>
+                <default>false</default>
+                <cssExposed>false</cssExposed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recommendation_summary__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For example services to disabled people in Rochdale or services to the community in Aberporth.</inlineHelpText>
+        <label>Recommendation summary</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Relationship_Nominator_to_Nominee__c</fullName>
+        <description>How does the nominator know the nominee?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For example: son, friend, colleague</inlineHelpText>
+        <label>Relationship of nominator to nominee</label>
+        <length>55</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Standout_Details__c</fullName>
+        <description>This is a field which will be used with the HAS Form Implementation. It is being used to store information about the Nominee and their actions which make the Nominee Stand out from other persons in their position - if applicable. There will be a validation rule that should fire if this field is empty and the Others In Post Picklist is set to Yes</description>
+        <externalId>false</externalId>
+        <label>Standout Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Escalated</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+                <closed>false</closed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Sample Cases</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenNominations</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>Nominee_Name__c</columns>
+        <columns>Progress__c</columns>
+        <columns>Letters_of_Support_Outstanding__c</columns>
+        <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Open Nominations</label>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Sample_Cases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.TYPE</field>
+            <operation>equals</operation>
+            <value>Sample Cases</value>
+        </filters>
+        <label>Sample Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Trial_Activities</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.CLOSED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.TYPE</field>
+            <operation>equals</operation>
+            <value>Trial</value>
+        </filters>
+        <label>Trial Activities</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>HAS_Form_Enforce_number_of_supporters</fullName>
+        <active>false</active>
+        <description>This is a validation rule to be used with the HAS Form Implementation. It will validate that the roll up summary, counting how many supporter child records the case has which have the &apos;letter of support provided&apos; checkbox set to false, is not equal to 1.</description>
+        <errorConditionFormula>Number_of_Supports_Added__c = 1</errorConditionFormula>
+        <errorMessage>You must provide details for at least 2 supporters</errorMessage>
+    </validationRules>
+</CustomObject>

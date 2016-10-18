@@ -1,0 +1,228 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationReviewExtension">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="title">
+            <title>{!$Label.HAS_Label}</title>
+        </apex:define>
+
+        <apex:define name="header-proposition">
+    			<nav>
+    				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+    				<apex:define name="login-proposition">
+    					<c:HAS_Community_Proposition />
+    				</apex:define>
+    			</nav>
+    		</apex:define>
+
+        <apex:define name="global-breadcrumb">
+            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+			<li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+        </apex:define>
+
+        <apex:define name="pageErrors">
+            <c:HAS_Page_Messages />
+        </apex:define>
+
+        <apex:define name="mainContent">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+				<apex:outputPanel layout="block" styleClass="inner">
+                <apex:outputPanel layout="block" id="content" styleClass="home">
+
+	                <h1 class="heading-medium">
+	                    <apex:outputText value="{!$Label.HAS_Form_Page_21_Title}" />
+	                </h1>
+
+	                <apex:form >
+
+	                    <!-- Review form -->
+						<h2 class="heading-medium">
+		                    Nominator
+		                </h2>
+
+	                    <apex:dataTable value="{!nominator}" var="nominator" id="nominatorNameTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Nominator_Name_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominator[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+	                    <apex:dataTable value="{!nominator}" var="nominator" id="nominatorAddressTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Address_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominator[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+	                    <apex:dataTable value="{!nominator}" var="nominator" id="nominatorContactTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Contact_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominator[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+						<div class="form-group">
+							<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" /></h3>
+
+		                    <apex:dataTable value="{!nominator}" var="nominator" id="nominatorDiversityTable" styleClass="clrDataTable">
+		                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Diversity_Review}" var="field">
+		                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominator[field]}" headerClass="" />
+		                        </apex:repeat>
+		                    </apex:dataTable>
+						</div>
+
+						<h2 class="heading-medium">
+		                    Nominee
+		                </h2>
+
+	                    <apex:dataTable value="{!nominee}" var="nominee" id="nomineeNameTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Nominee_Name_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominee[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+	                    <apex:dataTable value="{!nominee}" var="nominee" id="nomineeAddressTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Address_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominee[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+	                    <apex:dataTable value="{!nominee}" var="nominee" id="nomineeContactTable" styleClass="clrDataTable form-group">
+	                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Contact_Review}" var="field">
+	                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominee[field]}" headerClass="" />
+	                        </apex:repeat>
+	                    </apex:dataTable>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_7_Title}" /></h3>
+
+	                    <apex:outputPanel layout="block" styleClass="form-group">
+	                        <apex:outputText value="{!nominee.Date_Of_Birth__c}" id="Birthdate" html-makeReadOnly="{!readOnlyMode}" />
+	                    </apex:outputPanel>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_9_Title}" /></h3>
+
+	                     <apex:outputPanel layout="block" styleClass="form-group">
+	                        <apex:outputText value="{!Nomination.Relationship_Nominator_To_Nominee__c}" id="relationship" html-makeReadOnly="{!readOnlyMode}" />
+	                    </apex:outputPanel>
+
+                        <div class="form-group">
+							<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" /></h3>
+
+		                    <apex:dataTable value="{!nominee}" var="nominee" id="nomineeDiversityTable" styleClass="clrDataTable">
+		                         <apex:repeat value="{!$ObjectType.Contact.FieldSets.Generic_Diversity_Review}" var="field">
+		                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!nominee[field]}" headerClass="" />
+		                        </apex:repeat>
+		                    </apex:dataTable>
+						</div>
+
+
+						<h2 class="heading-medium">
+		                    Nomination
+		                </h2>
+
+						<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_10_Title}" /></h3>
+
+	                    <apex:outputPanel styleClass="form-group" layout="block">
+	                        <apex:outputText value="{!Nomination.Recommendation_summary__c}" html-makeReadOnly="{!readOnlyMode}" />
+	                    </apex:outputPanel>
+
+						<div class="form-group">
+							<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_11_Title}" /></h3>
+
+		                    <apex:dataTable value="{!posts}" var="post" id="postsTable" styleClass="clrDataTable">
+		                         <apex:repeat value="{!$ObjectType.Post__c.FieldSets.posts}" var="field">
+		                            <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!post[field]}" headerClass="" />
+		                        </apex:repeat>
+		                    </apex:dataTable>
+						</div>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_12_Title}" /></h3>
+
+	                    <apex:outputPanel styleClass="form-group" layout="block">
+	                        <apex:outputText value="{!Nomination.Benefits_Details__c}" html-makeReadOnly="{!readOnlyMode}"  />
+	                    </apex:outputPanel>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_13_Title}" /></h3>
+
+	                    <apex:outputPanel id="standoutDetailsPanel">
+	                    <apex:outputText value="{!Nomination.Others_In_Post__c}" />
+	                        <apex:outputPanel styleClass="form-group" layout="block" rendered="{!Nomination.Others_In_Post__c = 'Yes'}">
+	                            <apex:outputPanel layout="block" styleClass="panel-indent">
+	                                <apex:outputLabel styleClass="form-label" escape="false" value="{!$Label.HAS_Standout_Label}" >
+	                                </apex:outputLabel>
+	                                <apex:outputText value="{!Nomination.Standout_Details__c}" html-makeReadOnly="{!readOnlyMode}"  />
+	                             </apex:outputPanel>
+	                        </apex:outputPanel>
+	                    </apex:outputPanel>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_14_Title}" /></h3>
+
+	                    <apex:outputPanel styleClass="form-group" layout="block">
+	                        <apex:outputText value="{!Nomination.Other_Recognition__c}" html-makeReadOnly="{!readOnlyMode}" /><br />
+	                    </apex:outputPanel>
+
+
+						<apex:outputPanel rendered="{!!evidenceAttachments.empty}" id="evidenceAttachmentList" >
+						<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_15_Title}" /></h3>
+	                        <apex:dataTable value="{!evidenceAttachments}" var="evidence" id="evidenceTable" styleClass="clrDataTable form-group">
+	                          <apex:repeat value="{!$ObjectType.Nomination_Attachment__c.FieldSets.attachments}" var="field">
+	                              <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!evidence[field]}" headerClass="" />
+	                          </apex:repeat>
+	                        </apex:dataTable>
+	                    </apex:outputPanel>
+
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_17_Title}" /></h3>
+
+						<apex:outputPanel id="supporterList" styleClass="form-group">
+							<apex:dataTable value="{!supporters}" var="supporter" id="supportersTable" styleClass="clrDataTable">
+		                      <apex:repeat value="{!$ObjectType.Supporter__c.FieldSets.supporters}" var="field">
+		                          <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!supporter[field]}" headerClass="" />
+		                      </apex:repeat>
+		                    </apex:dataTable>
+						</apex:outputPanel>
+
+						<apex:outputPanel rendered="{!!letterAttachments.empty}" id="letterAttachmentList" >
+							<h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_18_Title}" /></h3>
+
+	                        <apex:dataTable value="{!letterAttachments}" var="letter" id="letterTable" styleClass="clrDataTable form-group">
+	                          <apex:repeat value="{!$ObjectType.Nomination_Attachment__c.FieldSets.attachments}" var="field">
+	                              <apex:column title="{!field.Label}" headervalue="{!field.Label}" value="{!letter[field]}" headerClass="" />
+	                          </apex:repeat>
+	                        </apex:dataTable>
+	                    </apex:outputPanel>
+
+	                    <apex:outputPanel rendered="{!readOnlyMode}" styleClass="formGroup" layout="block">
+	                        <p><a class="button clrButton" href="{!$Label.HAS_Nomination_Complete_URL}">{!$Label.HAS_Nomination_Complete_Copy}</a></p>
+	                    </apex:outputPanel>
+
+						<apex:outputPanel rendered="{!!readOnlyMode}" id="submitNominationPanel" styleClass="formGroup" layout="block">
+							<h2 class="heading-medium">
+								<apex:outputText value="{!$Label.HAS_Form_Page_21_Send_Your_Nomination}" />
+							</h2>
+
+							<p>
+								<apex:outputLabel value="{!$Label.HAS_Drafting_Service_Label}" for="draftingServiceUsed">
+									<apex:inputCheckbox id="draftingServiceUsed" value="{!nomination.Drafting_Service_Used__c}" />
+								</apex:outputLabel>
+							</p>
+
+							<p>
+								<apex:outputText value="{!$Label.HAS_Nomination_Confidentiality_Text}" />
+							</p>
+							<p>
+								<apex:outputText value="{!$Label.HAS_Submission_Text}" />
+							</p>
+
+							<apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Send_Nomination}" id="saveStep21"  />
+							<br />
+							<br />
+							<apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep21" immediate="TRUE" />
+						</apex:outputPanel>
+
+	                </apex:form>
+                </apex:outputPanel>
+            </apex:outputPanel>
+			</div>
+		</div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

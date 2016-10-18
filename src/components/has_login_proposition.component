@@ -1,0 +1,29 @@
+<apex:component >
+    <div id="login-proposition-links">
+        <ul>
+            <li>
+                <apex:outputpanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">
+                <a href="{!$Label.HAS_My_Profile_Page}">{!$Label.HAS_My_Profile_Label}</a>
+                </apex:outputpanel>
+            </li>
+            <!--<li>
+                <a href="HAS_Search">{!$Label.HAS_Search_Label}</a>
+            </li>-->
+            <li>
+                <apex:outputpanel rendered="{!ISPICKVAL($User.UserType,'Guest')}">
+                <a href="HAS_Login_Page">{!$Label.HAS_Login_Label}</a>
+                </apex:outputpanel>
+            </li>
+            <li>
+                <apex:outputpanel rendered="{!ISPICKVAL($User.UserType,'Guest')}">
+                <a href="HAS_Create_Account">{!$Label.HAS_Register}</a>
+                </apex:outputpanel>
+            </li>
+            <li>
+                <apex:outputpanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">
+                <a  href="/secur/logout.jsp" >{!$Label.HAS_Logout_Label}</a>
+                </apex:outputpanel>
+            </li>
+        </ul>
+    </div>
+</apex:component>
