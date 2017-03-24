@@ -66,12 +66,12 @@
     <labels>
         <fullName>HAS_Address</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>HAS Address</shortDescription>
         <value>Honours and Appointments Secretariat&lt;br/&gt;
 Cabinet Office&lt;br/&gt;
 Ground Floor&lt;br/&gt;
-1 Horseguards Road&lt;br/&gt;
+1 Horse Guards Road&lt;br/&gt;
 London SW1A 2HQ</value>
     </labels>
     <labels>
@@ -433,6 +433,13 @@ Email: honours@cabinetoffice.gov.uk</value>
         <value>Remove</value>
     </labels>
     <labels>
+        <fullName>HAS_Domain_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS_Domain_URL</shortDescription>
+        <value>https://nominate-uk-honour.service.gov.uk/</value>
+    </labels>
+    <labels>
         <fullName>HAS_Drafting_Service_Help</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -500,7 +507,7 @@ Email: honours@cabinetoffice.gov.uk</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>HAS Evidence Send Later</shortDescription>
-        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horseguards Road, London SW1A 2HQ.</value>
+        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horse Guards Road, London SW1A 2HQ.</value>
     </labels>
     <labels>
         <fullName>HAS_Existing_User_Label</fullName>
@@ -629,9 +636,7 @@ Email: honours@cabinetoffice.gov.uk</value>
         <shortDescription>HAS Form Page 17 Text</shortDescription>
         <value>&lt;p&gt;We need two or more letters of support which endorse your nominee’s contribution. These should come from people who are familiar with your nominee’s services.&lt;/p&gt;
 
-&lt;p&gt;Please enter the names of your supporters. If you have the supporting letters now you can attach them on the next page. If not, you can send them later.&lt;/p&gt;
-
-&lt;p&gt;If your supporters wish to send any supporting letters to us directly they can email &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or post them to Honours and Appointments Secretariat, Cabinet Office, Room G/39, 1 Horse Guards Road, London SW1A 2HQ.&lt;/p&gt;</value>
+&lt;p&gt;Please enter the names of your supporters. If you have the supporting letters now you can attach them on the next page. If not, you can send them later.&lt;/p&gt;</value>
     </labels>
     <labels>
         <fullName>HAS_Form_Page_17_Title</fullName>
@@ -696,6 +701,7 @@ Email: honours@cabinetoffice.gov.uk</value>
         <shortDescription>HAS Form Page 22 Text</shortDescription>
         <value>&lt;ul class=&quot;list list-bullet&quot;&gt;
 &lt;li&gt;You will receive an acknowledgement email to confirm your nomination.&lt;/li&gt;
+&lt;li&gt;If you wish to send any further letters of support or evidence to support your nomination, you can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horse Guards Road, London SW1A 2HQ.&lt;/li&gt;
 &lt;li&gt;We will review your nomination. This takes at least 12 to 18 months because of the background work needed to assess a nomination.&lt;/li&gt;
 &lt;li&gt;You can check the &lt;a href=&quot;https://www.gov.uk/honours/honours-lists&quot; rel=&quot;external&quot;&gt;published lists&lt;/a&gt; to see if your nominee has been successful.&lt;/li&gt;
 &lt;li&gt;Please do not tell the person you are nominating as it is not fair to raise their expectations. The number of honours available is strictly limited and unfortunately not everyone can receive recognition this way.&lt;/li&gt;
@@ -720,7 +726,7 @@ Email: honours@cabinetoffice.gov.uk</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>HAS Form Page 2 Text</shortDescription>
-        <value>This address will be used for an acknowledgement and any future correspondence.</value>
+        <value>This address will only be used if we are unable to contact you by email.</value>
     </labels>
     <labels>
         <fullName>HAS_Form_Page_2_Title</fullName>
@@ -814,25 +820,18 @@ Email: honours@cabinetoffice.gov.uk</value>
         <value>has_formpage19</value>
     </labels>
     <labels>
-        <fullName>HAS_Formpage17_Name</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Formpage17 Name</shortDescription>
-        <value>has_formpage17</value>
-    </labels>
-    <labels>
-        <fullName>HAS_Formpage20_Name</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Formpage20 Name</shortDescription>
-        <value>has_formpage20</value>
-    </labels>
-    <labels>
         <fullName>HAS_Get_Started_Label</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>HAS Get Started</shortDescription>
         <value>Get started</value>
+    </labels>
+    <labels>
+        <fullName>HAS_Google_Analytics_Tracking_Code</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HAS Google Analytics Tracking Code</shortDescription>
+        <value>&apos;UA-55616751-4&apos;</value>
     </labels>
     <labels>
         <fullName>HAS_Guidance_1</fullName>
@@ -879,13 +878,9 @@ Email: honours@cabinetoffice.gov.uk</value>
     <labels>
         <fullName>HAS_Guidance_12_Text</fullName>
         <language>en_US</language>
-        <protected>false</protected>
+        <protected>true</protected>
         <shortDescription>HAS Guidance 12 Text</shortDescription>
-        <value>Please help us to assess the effectiveness of the honours system by filling in the monitoring section.
-
-One part is about you and the other is about the nominee. This information will help us to improve the coverage of the honours system by ensuring that all areas of society are aware of the nomination process and are nominated for honours. Monitoring helps us to identify gaps.
-
-This information will be used only in aggregate for monitoring purposes and is not part of the assessment of the nominee. There are no quotas in the honours system for particular groups.</value>
+        <value>Please help us to assess the effectiveness of the honours system by filling in the monitoring section. One part is about you and the other is about the nominee. This information will help us to improve the coverage of the honours system by ensuring that all areas of society are aware of the nomination process and are nominated for honours. Monitoring helps us to identify gaps. This information will be used only in aggregate for monitoring purposes and is not part of the assessment of the nominee. There are no quotas in the honours system for particular groups.</value>
     </labels>
     <labels>
         <fullName>HAS_Guidance_13</fullName>
@@ -1096,7 +1091,7 @@ Nominations should be made while the nominee is still active and, if possible, a
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>HAS Letter Send Later</shortDescription>
-        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horseguards Road, London SW1A 2HQ.</value>
+        <value>You can email them to &lt;a href=&quot;mailto:honours@cabinetoffice.gov.uk?subject=Honours and Appointments Secretariat - Nomination Attachment&quot;&gt;honours@cabinetoffice.gov.uk&lt;/a&gt; or send them to Honours and Appointments Secretariat, Cabinet Office, Ground Floor, 1 Horse Guards Road, London SW1A 2HQ.</value>
     </labels>
     <labels>
         <fullName>HAS_Letters_of_Support_Text</fullName>
@@ -1417,15 +1412,6 @@ Nominations should be made while the nominee is still active and, if possible, a
 &lt;p&gt;We will also contact you by email, telephone or by post if required as part of the administrative activities related to your nomination.&lt;/p&gt;</value>
     </labels>
     <labels>
-        <fullName>HAS_Policy_Contacting_You_Text2</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Policy Contacting You Text2</shortDescription>
-        <value>&lt;p&gt;We will also contact you by email, telephone or by post if required as part of the Office of Registrar of the Consultant Lobbyists’ activities related to our duty to monitor compliance activities as stipulated in ‘The Act.’&lt;/p&gt;
-&lt;p&gt;You may also receive service emails related to your payment for registration from the payment gateway providers that the Register of Consultant Lobbyists service uses.&lt;/p&gt;
-&lt;p&gt;Your will not receive marketing information from the Office of the Registration of Consultant Lobbyists.&lt;/p&gt;</value>
-    </labels>
-    <labels>
         <fullName>HAS_Policy_DPA_Label</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -1461,14 +1447,6 @@ Nominations should be made while the nominee is still active and, if possible, a
         <protected>false</protected>
         <shortDescription>HAS Policy Data Held Label</shortDescription>
         <value>Data held by third parties</value>
-    </labels>
-    <labels>
-        <fullName>HAS_Policy_Data_Held_Text</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Policy Data Held Text</shortDescription>
-        <value>&lt;p&gt;Registration payment information will be held by PCI compliant third party payment gateways used by the Register for Consultant Lobbyist service. These payment gateway providers are RBS Worldpay and Gocardless.com. If we change payment gateway providers we will update the information in this page.&lt;/p&gt;
-&lt;p&gt;We do not share your personal data with third parties for commercial or marketing purposes.&lt;/p&gt;</value>
     </labels>
     <labels>
         <fullName>HAS_Policy_Data_Held_Where_Label</fullName>
@@ -1629,15 +1607,6 @@ Nominations should be made while the nominee is still active and, if possible, a
         <value>HAS_Privacy_Page</value>
     </labels>
     <labels>
-        <fullName>HAS_Privacy_Policy_Text</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Privacy Policy Text</shortDescription>
-        <value>&lt;p&gt;The Office of Honours and Nominations (‘we’) work for the Registrar in the implementation of The Transparency of Lobbying, Non-Party Campaigning and Trade Union Administration Act 2014 Part 1 (‘The Act’).&lt;/p&gt;
-&lt;p&gt;The Register of Consultant Lobbyists (‘the website’) is the instantiation of ‘The Register’ as defined by The Act.&lt;/p&gt;
-&lt;p&gt; Users of the service fall into two groups - registrants who are required to submit data and viewers of the published register.&lt;/p&gt;</value>
-    </labels>
-    <labels>
         <fullName>HAS_Privacy_When_Label</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -1658,13 +1627,6 @@ Nominations should be made while the nominee is still active and, if possible, a
                 &lt;p&gt;
                 We also keep a record of inbound and outbound communications with registrants through other channels including email, post and telephone. These records include nominations not done through the website.
                 &lt;/p&gt;</value>
-    </labels>
-    <labels>
-        <fullName>HAS_Quarterly_Return_Page_Strapline</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HAS Quarterly Return Page Strapline</shortDescription>
-        <value>As part of your quarterly return, you need to submit the names of the paying clients on whose behalf you have conducted the business of consultant lobbying. Only enter a client once even if you communicated with them multiple times in the same quarter.</value>
     </labels>
     <labels>
         <fullName>HAS_RCL_Label</fullName>
@@ -1987,8 +1949,10 @@ Nominations should be made while the nominee is still active and, if possible, a
         <protected>false</protected>
         <shortDescription>HAS User Create Failed</shortDescription>
         <value>We are unable to complete your registration at this time.
+
 It might be that you have already registered your email address. Please either login or register using a different email address.
-Please retry, and if you are still experiencing issues please contact the Office for the Registrar of Consultant Lobbyists at &lt;a href=&quot;mailto:[emailAddress]?subject=Nominations and Honours Secretariat - Registration Issues&quot; &gt;[emailAddress]&lt;/a&gt;.</value>
+
+Please retry, and if you are still experiencing issues please contact the Honours and Appointments Secretariat at &lt;a href=&quot;mailto:[emailAddress]?subject=Nominations and Honours Secretariat - Registration Issues&quot; &gt;[emailAddress]&lt;/a&gt;.</value>
     </labels>
     <labels>
         <fullName>HAS_User_Email_Help_Text</fullName>
@@ -2073,5 +2037,12 @@ Please retry, and if you are still experiencing issues please contact the Office
         <protected>false</protected>
         <shortDescription>HAS Your Nationality Selfdefined Label</shortDescription>
         <value>Your nationality</value>
+    </labels>
+    <labels>
+        <fullName>Has_Other_Nationality_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Has Other Nationality Error</shortDescription>
+        <value>If you select &apos;Other&apos;, please input a valid Nationality.</value>
     </labels>
 </CustomLabels>

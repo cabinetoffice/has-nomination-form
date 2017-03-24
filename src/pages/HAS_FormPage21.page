@@ -98,6 +98,12 @@
 	                        <apex:outputText value="{!nominee.Date_Of_Birth__c}" id="Birthdate" html-makeReadOnly="{!readOnlyMode}" />
 	                    </apex:outputPanel>
 
+	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Nominee_Nationality}" /></h3>
+
+	                    <apex:outputPanel layout="block" styleClass="form-group">
+	                        <apex:outputText value="{!nominee.Nationality__c}, " id="Nationality" html-makeReadOnly="{!readOnlyMode}" /><apex:outputText value="{!Nominee.Nationalities__c}" id="Nationalities"  />
+	                    </apex:outputPanel>
+
 	                    <h3 class="heading-small"><apex:outputText value="{!$Label.HAS_Form_Page_9_Title}" /></h3>
 
 	                     <apex:outputPanel layout="block" styleClass="form-group">

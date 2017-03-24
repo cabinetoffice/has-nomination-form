@@ -36,26 +36,19 @@
 			                    <apex:outputPanel id="nomineeDetailsInput">
 			                        <apex:form id="nomineeForm">
 
-			                        <apex:actionRegion >
+			                        <!-- <apex:actionRegion > -->
 			                            <apex:outputPanel styleClass="form-group" layout="block" id="isBritishPanel">
 											<apex:outputLabel styleClass="heading-medium" value="{!$Label.HAS_Nominee_Nationality}" />
-											<apex:outputPanel id="isBritishRadioPanel">
-			                                    <c:HAS_FormGroup_Radio formId="selectIsBritish" formLabel="" formCurrentValue="{!nominee.is_British__c}" formOptions="{!isBritish}" formAction="selectIsBritish" isrequired="TRUE" makeReadOnly="{!readOnlyMode}" />
-			                                </apex:outputPanel>
-			                                <apex:actionFunction name="selectIsBritish" immediate="true" reRender="Object,otherNationality">
-			                                    <apex:param name="selectedValue" assignTo="{!nominee.is_British__c}" value="" />
-			                                </apex:actionFunction>
-			                                </apex:outputPanel>
-			                            </apex:actionRegion>
+		                                </apex:outputPanel> 	
+							            	<c:bg_HAS_NationalitySelectionComponent ExtCon="{!ExtCon}"  NomExtCon="{!NomExtCon}"/>
+							            <apex:outputPanel rendered="{! readOnlyMode}" >                 
+							                <input id="readOnlySelection" type="text" value="{!nominee.is_British__c}" disabled="disabled" >
+							                </input>             
+							            </apex:outputPanel> 
+			                            <!-- </apex:actionRegion> -->
 
 				                        <apex:outputPanel id="otherNationality">
-				                            <apex:outputPanel styleClass="form-group" rendered="{!nominee.is_British__c = 'Other'}">
-				                                    <apex:outputPanel layout="block" styleClass="panel-indent">
-				                                        <p>{!$Label.HAS_Nationality_Format_Hint}</p>
-														<apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Nationality__c.Label}" for="otherNationalityField" />
-				                                        <apex:inputField id="otherNationalityField" value="{!nominee.Nationality__c}" styleClass="form-control" />
-				                                    </apex:outputPanel>
-				                            </apex:outputPanel>
+				                            <c:bg_HAS_NationalityComponent ExtCon="{!ExtCon}" />
 				                        </apex:outputPanel>
 
 			                            <apex:outputPanel layout="block" styleClass="form-group">

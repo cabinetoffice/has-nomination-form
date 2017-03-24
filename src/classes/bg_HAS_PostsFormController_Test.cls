@@ -374,15 +374,14 @@
 
                // Change a field so we can check that the same record has not been updated
                extController.post.End_Date__c = '13/08/2002';
-               extController.post.Id = 'a044E0000029Idk';
+               extController.post.Id = testpost.Id;
 
-               extController.savePost();
+               PageReference result = extController.savePost();
 
                List<Post__c> testRecordSaved = [SELECT Name, Start_Date__c, End_Date__c, Position_Status__c from Post__c WHERE Nomination_Id__c =: testCase.Id AND End_Date__c =: '13/08/2002'];
 
-               System.assertEquals(0, testRecordSaved.size());
-               System.assertNotEquals(null, extcontroller.savePost());
-
+               System.assertEquals(1, testRecordSaved.size());
+               System.assertNotEquals(null, result);
          }
      }
 

@@ -34,7 +34,7 @@ public class bg_UserUtils
         }
         catch (Exception ex)
         {
-            //do not bubble the exception just return null
+            //do not bubble the exception just retun null
             result = null;
         }
         return result;              

@@ -75,7 +75,7 @@
                    <div class="header-logo">
                         <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
                             <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt="" /> GOV.UK
-               </a>
+                        </a>
                     </div>
                 </div>
                 <div class="header-proposition">
@@ -154,7 +154,9 @@
         <script type="text/javascript" src="{!URLFOR($Resource.HAS_Resources, '/javascripts/vendor/polyfills/details-polyfill-object.js')}"></script>
     <apex:includeScript value="{!URLFOR($Resource.HAS_Resources, '/javascripts/application.js')}" />
     <script type="text/javascript" src="{!URLFOR($Resource.HAS_Resources, '/javascripts/bg-class-manipulator.js')}"></script>
-    <script type="text/javascript" src="{!URLFOR($Resource.HAS_Resources, '/javascripts/google-analytics.js')}"></script>
 
+    <!-- Google Analytics component with JS -->
+    <c:HAS_Google_Analytics GATrackingCode="{!$Label.HAS_Google_Analytics_Tracking_Code}"/>
+    
     </body>
 </apex:page>

@@ -1,0 +1,17 @@
+<apex:component >
+<apex:attribute name="ExtCon" type="bg_NominationBaseExtension" required="true" description="handle to the Extension controller" />
+
+   	<apex:outputPanel styleClass="form-group" rendered="{!ExtCon.isOtherSelected}">
+        <apex:outputPanel layout="block" styleClass="panel-indent">
+            <p>{!$Label.HAS_Nationality_Format_Hint}</p>
+            <apex:repeat value="{!ExtCon.nationalities}" var="country">
+				<apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Nationality__c.Label}" for="otherNationalityField" />
+            	<apex:inputText id="otherNationalityField" value="{!country.NationalityLabel}" styleClass="form-control" style="margin-bottom:5px" />
+            	<apex:commandLink action="{!ExtCon.updateNationalities}" value="Remove" reRender="otherNationality"  >
+            		<apex:param value="{!country.Index}" assignTo="{!ExtCon.countryName}" name="{!country.Index}" />
+            	</apex:commandLink>
+            </apex:repeat>
+        </apex:outputPanel>
+        <apex:commandLink action="{!ExtCon.addNationality}" value="Add another country" />
+	</apex:outputPanel>
+</apex:component>

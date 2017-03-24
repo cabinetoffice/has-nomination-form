@@ -21,6 +21,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Ignore</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -29,19 +33,11 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>MassApprovePosts</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>MassCreateCase</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>MassIgnore</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>MassRejectPosts</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -229,6 +225,12 @@
     </fields>
     <fields>
         <fullName>ResponseContextExternalId</fullName>
+    </fields>
+    <fields>
+        <fullName>ReviewScale</fullName>
+    </fields>
+    <fields>
+        <fullName>ReviewScore</fullName>
     </fields>
     <fields>
         <fullName>ReviewedStatus</fullName>

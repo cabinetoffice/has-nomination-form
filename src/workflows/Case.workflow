@@ -13,6 +13,8 @@
     </alerts>
     <alerts>
         <fullName>Notify_the_HAS_office_that_a_form_has_been_completed</fullName>
+        <ccEmails>honours@cabinetoffice.gov.uk</ccEmails>
+        <ccEmails>shikha.gupta@salesforce.com</ccEmails>
         <description>Notify the HAS office that a form has been completed</description>
         <protected>false</protected>
         <recipients>
@@ -21,7 +23,7 @@
         </recipients>
         <senderAddress>honours@cabinetoffice.gov.uk</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>HAS_Email_Templates/HAS_Nomination_Submission_Office</template>
+        <template>HAS_Email_Templates/HAS_Nomination_Submission_Office_VF</template>
     </alerts>
     <fieldUpdates>
         <fullName>Set_Awaiting_LOS</fullName>
@@ -40,7 +42,7 @@
             <name>Set_Awaiting_LOS</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <criteriaItems>
             <field>Case.Progress__c</field>
             <operation>equals</operation>

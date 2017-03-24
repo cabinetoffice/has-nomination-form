@@ -17,12 +17,14 @@
  *					not case status
  *  07/09/2016  NF  Added a call to a new util method for populating case defaults
  *  16/09/2016  NF  Added ValidData boolean which can be overidden in extensions for supporters and posts to ensure the required number have been added.
-                    Invalid entries will display and appropriate error for the page.
+ *                  Invalid entries will display and appropriate error for the page.
+ *  26/01/2017  LG  CN27342 - 
  ****************************************************************/
 public without sharing virtual class bg_NominationBaseExtension
 {
     public Case Nomination { get; set; } // The Nomination Case Record
     public Contact Nominee { get; set; } // The Nominee Conact Record
+    public static final String OTHER_SELECTION = 'Other';
     public Contact Nominator { get; set; } // The Nominator Contact Record
     public Boolean ConfigurationError { get; set; } // Indicates there is a Configuration Error - this should display an error to the user
     public String ConfigurationErrorMessage { get; set; } // The error to display if ConfigurationError is set to true
@@ -38,15 +40,27 @@ public without sharing virtual class bg_NominationBaseExtension
     		populatePageSettings();
     	}
 	}
-
-
+    // List Wrapper for displaying nationality options
+    public List<NationalityWrapper> nationalities 
+    {
+        get
+        {
+            return nationalities;
+        }
+        set;
+    }
+    public Integer countryName {get; set;}
     public Boolean readOnlyMode { get; set; } // NF We may dispense with this after reviewing the review and edit page
     public Boolean SaveNominee = false;
     public Boolean SaveNominator = false;
     public Boolean ValidData = true;
-
+    public boolean isBritishSelected {get; set;}
+    public boolean isOtherSelected {get; set;}
     public bg_PageSettingWrapper CurrentPageWrapper { get; set; }
     private static Map<String, bg_PageSettingWrapper> PageWrappers; //GetPageReferenceSettingsByProgressStatus()
+
+    /* ***** HANDLE TO CURRENT INSTANCE OF CONTROLLER (to be passed to rendered VF components, avoids re-instantiation of controller) ***** */
+    public bg_NominationBaseExtension ExtCon { get { return this; } }
 
     /*
         Constructor method for the Controllers
@@ -56,13 +70,13 @@ public without sharing virtual class bg_NominationBaseExtension
         //Set default property values
         ConfigurationError = false;
         ConfigurationErrorMessage = '';
-
+        countryName = 0;
         // Add default fields required that may not be referenced on the VF Page
         if (!test.isRunningTest())
         {
             stdController.addFields(bg_formUtils.CASE_FORM_FIELDS);
         }
-
+        nationalities = new List<NationalityWrapper>();
         Nomination = (Case)stdController.getRecord();
         if (Nomination.id == null)
         {
@@ -85,12 +99,31 @@ public without sharing virtual class bg_NominationBaseExtension
             (Nomination.Nominee__c == null))
         {
             Nominee = new Contact();
+            //nationalities = new List<String>();
+            isBritishSelected = false;
+            isOtherSelected = false;
         }
         else
         {
             Nominee = bg_FormUtils.getNominee(Nomination.Nominee__c);
+            isBritishSelected = Nominee.Is_British__c != OTHER_SELECTION;
+            
+            // display any pre-selected nationalities
+            if(Nominee.Nationalities__c != null)
+            {
+                Integer startIndex = nationalities.Size();
+                for (String s : Nominee.Nationalities__c.split(','))
+                {
+                    nationalities.add(new NationalityWrapper(startindex, s));
+                    startIndex++;
+                }
+            }
+            else
+            {
+                nationalities = new List<NationalityWrapper>();
+            }
+            isOtherSelected = nationalities.Size() > 0;
             System.debug(System.LoggingLevel.error,'### enter populateNominee() = ' + Nominee);
-
         }
     }
 
@@ -143,7 +176,6 @@ public without sharing virtual class bg_NominationBaseExtension
         SaveNominee = false;
         SaveNominator = false;
         ValidData = true;
-
         readOnlyMode = Nomination.Progress__c == Label.HAS_Nomination_Completed_Status;
     }
 
@@ -166,15 +198,31 @@ public without sharing virtual class bg_NominationBaseExtension
 
         if (SaveNominee)
         {
-            System.debug(System.LoggingLevel.error,'### Save Nominee');
-            nomineeResult = Database.upsert(Nominee, false);
-            saveSuccess = bg_formUtils.EvaluateUpsertResult(nomineeResult);
-            if ((saveSuccess) &&
-            	(Nomination.Nominee__c == null))
-            {
-            	Nomination.Nominee__c = Nominee.Id;
-            }
+            String updatednationalities = '';
+            // LG Added to update Nominee's nationalities 
 
+            for (NationalityWrapper nw : nationalities)
+            {
+                updatednationalities += nw.NationalityLabel + ',';
+            }
+            Nominee.Nationalities__c = updatednationalities.removeEnd(',');
+            system.debug(LoggingLevel.ERROR,'*** LG *** updatednationalities: ' + updatednationalities);
+            if (isOtherSelected && updatednationalities.length() < 2)
+            {
+                ApexPages.addMessage(new ApexPages.Message(ApexPages.severity.error, Label.Has_Other_Nationality_Error));
+                return null;
+            }
+            else 
+            {
+                System.debug(System.LoggingLevel.error,'### Save Nominee'+Nominee);
+                nomineeResult = Database.upsert(Nominee, false);
+                saveSuccess = bg_formUtils.EvaluateUpsertResult(nomineeResult);
+                if ((saveSuccess) &&
+                    (Nomination.Nominee__c == null))
+                {
+                    Nomination.Nominee__c = Nominee.Id;
+                }
+            }           
         }
 
         if ((saveSuccess) &&
@@ -255,4 +303,32 @@ public without sharing virtual class bg_NominationBaseExtension
         return result;
 	}
 
+    /*
+        Method to Add an empty string to List in order for User to input new additional value
+    */
+    public virtual void addNationality()
+    {
+        String newCountry = '';
+        nationalities.add(new NationalityWrapper(nationalities.Size(), newCountry));
+    }
+
+    /*
+        Method to iterate a list of Country Names and remove the matching parameter from the list
+    */
+    public virtual void updateNationalities()
+    {
+        nationalities.remove(countryName);
+    } 
+
+    public class NationalityWrapper 
+    {
+        public Integer Index {get;set;}
+        public String NationalityLabel {get; set;}
+
+        public NationalityWrapper(Integer i, String label)
+        {
+            this.Index = i;
+            this.NationalityLabel = label;
+        }
+    }
 }

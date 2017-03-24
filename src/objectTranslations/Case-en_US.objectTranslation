@@ -17,6 +17,10 @@
         <startsWith>Consonant</startsWith>
     </fields>
     <fields>
+        <label><!-- BG Test --></label>
+        <name>BGTest__c</name>
+    </fields>
+    <fields>
         <label><!-- Benefits Details --></label>
         <name>Benefits_Details__c</name>
     </fields>
@@ -88,25 +92,6 @@
         <name>Number_of_Supports_Added__c</name>
     </fields>
     <fields>
-        <name>Origin</name>
-        <picklistValues>
-            <masterLabel>Chatter Answers</masterLabel>
-            <translation><!-- Chatter Answers --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Email</masterLabel>
-            <translation><!-- Email --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Phone</masterLabel>
-            <translation><!-- Phone --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Web</masterLabel>
-            <translation><!-- Web --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
         <label><!-- Origin --></label>
         <name>Origin__c</name>
     </fields>
@@ -129,21 +114,6 @@
     <fields>
         <label><!-- Post Details --></label>
         <name>Post_Details__c</name>
-    </fields>
-    <fields>
-        <name>Priority</name>
-        <picklistValues>
-            <masterLabel>High</masterLabel>
-            <translation><!-- High --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Low</masterLabel>
-            <translation><!-- Low --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Medium</masterLabel>
-            <translation><!-- Medium --></translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Progress Status --></label>
@@ -238,29 +208,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <name>Reason</name>
-        <picklistValues>
-            <masterLabel>Complex functionality</masterLabel>
-            <translation><!-- Complex functionality --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Existing problem</masterLabel>
-            <translation><!-- Existing problem --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Instructions not clear</masterLabel>
-            <translation><!-- Instructions not clear --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>New problem</masterLabel>
-            <translation><!-- New problem --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>User didn&apos;t attend training</masterLabel>
-            <translation><!-- User didn&apos;t attend training --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
         <help><!-- For example services to disabled people in Rochdale or services to the community in Aberporth. --></help>
         <label><!-- Recommendation summary --></label>
         <name>Recommendation_summary__c</name>
@@ -273,36 +220,6 @@
     <fields>
         <label><!-- Standout Details --></label>
         <name>Standout_Details__c</name>
-    </fields>
-    <fields>
-        <name>Status</name>
-        <picklistValues>
-            <masterLabel>Closed</masterLabel>
-            <translation><!-- Closed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Escalated</masterLabel>
-            <translation><!-- Escalated --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>On Hold</masterLabel>
-            <translation><!-- On Hold --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <name>Type</name>
-        <picklistValues>
-            <masterLabel>Sample Cases</masterLabel>
-            <translation><!-- Sample Cases --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Trial</masterLabel>
-            <translation><!-- Trial --></translation>
-        </picklistValues>
     </fields>
     <layouts>
         <layout>Case Feed Layout</layout>

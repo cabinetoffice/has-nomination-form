@@ -33,6 +33,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -86,6 +90,18 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BGTest__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_390,FIND(&apos;.com&apos;,$Api.Partner_Server_URL_390)+4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BG Test</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Benefits_Details__c</fullName>
@@ -751,8 +767,8 @@ $Label.HAS_Nomination_Table_Status_Complete,$Label.HAS_Nomination_Table_Status_L
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>Nominee_Name__c</columns>
+        <columns>Letters_of_Support_Required__c</columns>
         <columns>Progress__c</columns>
-        <columns>Letters_of_Support_Outstanding__c</columns>
         <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
         <filterScope>Everything</filterScope>
         <filters>

@@ -17,7 +17,7 @@ public with sharing class bg_AccountProfileExtension
 	
 
 	/* 
-	  Returns a list of nomination cases associated with the current logged in user's account
+	  Returns a list of nominatin cases associated with the current logged in user's account
 	*/
 	
 	public bg_AccountProfileExtension(ApexPages.StandardController stdController)

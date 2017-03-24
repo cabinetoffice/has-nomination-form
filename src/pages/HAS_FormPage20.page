@@ -1,175 +1,174 @@
 <apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStyleSheets="false" standardController="Case" extensions="bg_NominationDiversityExtension">
-    <c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
-    <apex:composition template="{!$Site.Template}">
+	<c:bg_SetPropertyComponent from="{!$CurrentPage.Name}" to="{!CurrentPageName}" />
+	<apex:composition template="{!$Site.Template}">
 
-        <apex:define name="title">
-            <title>{!$Label.HAS_Label}</title>
-        </apex:define>
+		<apex:define name="title">
+			<title>{!$Label.HAS_Label}</title>
+		</apex:define>
 
-        <apex:define name="header-proposition">
-            <nav>
-                <a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
-                <apex:define name="login-proposition">
-                    <c:HAS_Community_Proposition />
-                </apex:define>
-            </nav>
-        </apex:define>
+		<apex:define name="header-proposition">
+			<nav>
+				<a href="/" id="proposition-name">{!$Label.HAS_RCL_Label}</a>
+				<apex:define name="login-proposition">
+					<c:HAS_Community_Proposition />
+				</apex:define>
+			</nav>
+		</apex:define>
 
-        <apex:define name="global-breadcrumb">
-            <li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
-            <li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
-        </apex:define>
+		<apex:define name="global-breadcrumb">
+			<li><a href="{!$Label.HAS_Home_Page}">{!$Label.HAS_Home_Label}</a></li>
+        	<li><strong>{!$Label.HAS_Nomination_Form}</strong></li>
+		</apex:define>
 
-        <apex:define name="pageErrors">
-            <c:HAS_Page_Messages />
-        </apex:define>
+		<apex:define name="pageErrors">
+			<c:HAS_Page_Messages />
+		</apex:define>
 
-        <apex:define name="mainContent">
-        <div class="grid-row">
-            <div class="column-two-thirds">
-                    <apex:outputPanel layout="block" styleClass="inner">
-                        <apex:outputPanel layout="block" id="content" styleClass="home">
+		<apex:define name="mainContent">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+					<apex:outputPanel layout="block" styleClass="inner">
+						<apex:outputPanel layout="block" id="content" styleClass="home">
 
-                        <h1 class="heading-medium">
-                            <apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" />
-                        </h1>
+						<h1 class="heading-medium">
+							<apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" />
+						</h1>
 
-                        <p>
-                            <apex:outputText value="{!$Label.HAS_Guidance_12_Text}" />
-                        </p>
+						<p>
+							<apex:outputText value="{!$Label.HAS_Guidance_12_Text}" />
+						</p>
 
-                        <apex:form id="nominatorDetails">
+						<apex:form id="nominatorDetails">
 
 
-                        <apex:actionRegion >
-                            <apex:outputPanel styleClass="form-group" layout="block" id="nominatorDisabilityPanel">
-                                <apex:outputPanel id="nominatorDisabilityRadioPanel">
-                                    <c:HAS_FormGroup_Radio formId="nominatorSelectDisability" formLabel="{!$Label.HAS_Nominator_Disability_Label}" formCurrentValue="{!nominator.Disability__c}" formOptions="{!disability}" formAction="nominatorSelectDisability" isRequired="true" makeReadOnly="{!readOnlyMode}"/>
-                                    <!--<c:CLR_Field_Error errorString="{!accountTypeError}" />-->
-                                </apex:outputPanel>
-                                 <apex:actionFunction name="nominatorSelectDisability" immediate="true" reRender="Object">
-                                        <apex:param name="selectedValue" assignTo="{!nominator.Disability__c}" value="" />
-                                </apex:actionFunction>
-                            </apex:outputPanel>
-                        </apex:actionRegion>
+						<apex:actionRegion >
+							<apex:outputPanel styleClass="form-group" layout="block" id="nominatorDisabilityPanel">
+								<apex:outputPanel id="nominatorDisabilityRadioPanel">
+									<c:HAS_FormGroup_Radio formId="nominatorSelectDisability" formLabel="{!$Label.HAS_Nominator_Disability_Label}" formCurrentValue="{!nominator.Disability__c}" formOptions="{!disability}" formAction="nominatorSelectDisability" isRequired="true" makeReadOnly="{!readOnlyMode}"/>
+									<!--<c:CLR_Field_Error errorString="{!accountTypeError}" />-->
+								</apex:outputPanel>
+								 <apex:actionFunction name="nominatorSelectDisability" immediate="true" reRender="Object">
+										<apex:param name="selectedValue" assignTo="{!nominator.Disability__c}" value="" />
+								</apex:actionFunction>
+							</apex:outputPanel>
+						</apex:actionRegion>
 
-                        <apex:actionRegion >
-                            <apex:outputPanel styleClass="form-group" layout="block" id="nomineeDisabilityPanel">
-                                <apex:outputPanel id="nomineeDisabilityRadioPanel">
-                                    <c:HAS_FormGroup_Radio formId="nomineeSelectDisability" formLabel="{!$Label.HAS_Nominee_Disability_Label}" formCurrentValue="{!nominee.Disability__c}" formOptions="{!disability}" formAction="nomineeSelectDisability" isRequired="true" makeReadOnly="{!readOnlyMode}"/>
-                                    <!--<c:CLR_Field_Error errorString="{!accountTypeError}" />-->
-                                </apex:outputPanel>
-                                 <apex:actionFunction name="nomineeSelectDisability" immediate="true" reRender="Object">
-                                        <apex:param name="selectedValue" assignTo="{!nominee.Disability__c}" value="" />
-                                </apex:actionFunction>
-                            </apex:outputPanel>
-                        </apex:actionRegion>
+						<apex:actionRegion >
+							<apex:outputPanel styleClass="form-group" layout="block" id="nomineeDisabilityPanel">
+								<apex:outputPanel id="nomineeDisabilityRadioPanel">
+									<c:HAS_FormGroup_Radio formId="nomineeSelectDisability" formLabel="{!$Label.HAS_Nominee_Disability_Label}" formCurrentValue="{!nominee.Disability__c}" formOptions="{!disability}" formAction="nomineeSelectDisability" isRequired="true" makeReadOnly="{!readOnlyMode}"/>
+									<!--<c:CLR_Field_Error errorString="{!accountTypeError}" />-->
+								</apex:outputPanel>
+								 <apex:actionFunction name="nomineeSelectDisability" immediate="true" reRender="Object">
+										<apex:param name="selectedValue" assignTo="{!nominee.Disability__c}" value="" />
+								</apex:actionFunction>
+							</apex:outputPanel>
+						</apex:actionRegion>
 
-                               <h2 class="heading-small">{!$Label.HAS_Specify_Nominator_Ethnicity}</h2>
-                                <apex:outputPanel layout="block" styleClass="form-group">
-                                    <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}" for="nominatorEthnicityGroup" />
-                                    <apex:inputField styleClass="form-control clrSelect" value="{!nominator.Ethnic_Origin_Group__c}" id="nominatorEthnicityGroup" required="True" html-makeReadOnly="{!readOnlyMode}" onchange="showEthnicOrigin()"/>
-                                </apex:outputPanel>
-                                <apex:outputPanel layout="block" styleClass="form-group" id="nominatorEthnicOriginPanel" style="">
-                                    <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}" for="nominatorEthnicOrigin" />
-                                    <span class="ethnicStyleRequired requiredAttribute makeReadOnlyRequired">
-                                        <apex:inputField styleClass="form-control clrSelect" value="{!nominator.Ethnic_Origin__c}" id="nominatorEthnicOrigin" required="True" html-notReRendered="{!readOnlyMode}"/>
-                                    </span>
-                                </apex:outputPanel>
+			                   <h2 class="heading-small">{!$Label.HAS_Specify_Nominator_Ethnicity}</h2>
+			                    <apex:outputPanel layout="block" styleClass="form-group">
+			                        <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}" for="nominatorEthnicityGroup" />
+			                        <apex:inputField styleClass="form-control clrSelect" value="{!nominator.Ethnic_Origin_Group__c}" id="nominatorEthnicityGroup" required="True" html-makeReadOnly="{!readOnlyMode}" onchange="showEthnicOrigin()"/>
+			                    </apex:outputPanel>
+			                    <apex:outputPanel layout="block" styleClass="form-group" id="nominatorEthnicOriginPanel" style="">
+			                        <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}" for="nominatorEthnicOrigin" />
+			                        <span class="ethnicStyleRequired requiredAttribute makeReadOnlyRequired">
+			                        	<apex:inputField styleClass="form-control clrSelect" value="{!nominator.Ethnic_Origin__c}" id="nominatorEthnicOrigin" required="True" html-notReRendered="{!readOnlyMode}"/>
+			                        </span>
+			                    </apex:outputPanel>
 
-                                <h2 class="heading-small">{!$Label.HAS_Specify_Nominee_Ethnicity}</h2>
-                                <apex:outputPanel layout="block" styleClass="form-group" id="ethnicOriginGroupPanel">
-                                    <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}" for="nomineeEthnicityGroup" />
-                                    <apex:inputField styleClass="form-control clrSelect" value="{!nominee.Ethnic_Origin_Group__c}" id="nomineeEthnicityGroup" required="TRUE"  html-makeReadOnly="{!readOnlyMode}" onchange="showEthnicOrigin()"/>
-                                </apex:outputPanel>
+								<h2 class="heading-small">{!$Label.HAS_Specify_Nominee_Ethnicity}</h2>
+		 						<apex:outputPanel layout="block" styleClass="form-group" id="ethnicOriginGroupPanel">
+		 							<apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}" for="nomineeEthnicityGroup" />
+		 							<apex:inputField styleClass="form-control clrSelect" value="{!nominee.Ethnic_Origin_Group__c}" id="nomineeEthnicityGroup" required="TRUE"  html-makeReadOnly="{!readOnlyMode}" onchange="showEthnicOrigin()"/>
+		 						</apex:outputPanel>
 
-                                <apex:outputPanel layout="block" styleClass="form-group" id="nomineeEthnicOriginPanel" style="">
-                                    <apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}" for="nomineeEthnicOrigin" />
-                                    <span class="ethnicStyleRequired requiredAttribute makeReadOnlyRequired">
-                                        <apex:inputField styleClass="form-control clrSelect" value="{!nominee.Ethnic_Origin__c}" id="nomineeEthnicOrigin" required="TRUE" html-notReRendered="{!readOnlyMode}" />
-                                    </span>
-                                </apex:outputPanel>
+		 						<apex:outputPanel layout="block" styleClass="form-group" id="nomineeEthnicOriginPanel" style="">
+		 							<apex:outputLabel styleClass="form-label" value="{!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}" for="nomineeEthnicOrigin" />
+		 							<span class="ethnicStyleRequired requiredAttribute makeReadOnlyRequired">
+		 								<apex:inputField styleClass="form-control clrSelect" value="{!nominee.Ethnic_Origin__c}" id="nomineeEthnicOrigin" required="TRUE" html-notReRendered="{!readOnlyMode}" />
+		 							</span>
+		 						</apex:outputPanel>
 
-                                    <apex:outputPanel layout="block" styleClass="form-group">
-                                        <apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep2" rendered="{!!readOnlyMode}" />
-                                        <br />
-                                        <br />
-                                        <apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep2" immediate="TRUE" />
+									<apex:outputPanel layout="block" styleClass="form-group">
+										<apex:commandButton styleClass="clrButton" action="{!saveRecords}" value="{!$Label.HAS_Save_And_Continue_Label}" id="saveStep2" rendered="{!!readOnlyMode}" />
+										<br />
+										<br />
+										<apex:commandLink action="{!previousPage}" value="{!$Label.HAS_Previous_Label}" id="prevStep2" immediate="TRUE" />
 
-                                        <!-- Read only
-                                        <apex:commandButton styleClass="clrButton" action="{!movePageForeward}" value="{!$Label.HAS_Next_Label}" id="advanceStep2" rendered="{!readOnlyMode}" />
-                                        -->
-                                    </apex:outputPanel>
-                                </apex:form>
-                            </apex:outputPanel>
-                        </apex:outputPanel>
-                        <script type="text/javascript" charset="utf-8">
+										<!-- Read only
+										<apex:commandButton styleClass="clrButton" action="{!movePageForeward}" value="{!$Label.HAS_Next_Label}" id="advanceStep2" rendered="{!readOnlyMode}" />
+										-->
+									</apex:outputPanel>
+				 				</apex:form>
+							</apex:outputPanel>
+						</apex:outputPanel>
+						<script type="text/javascript" charset="utf-8">
 
-                            jQuery(document).ready(function($)
-                            {
-                                console.log('readOnlyMode: ' + {!readOnlyMode});
+							jQuery(document).ready(function($)
+							{
 
-                                if($('[id$=ethnicOriginGroupPanel]').find('select').val() != '')
-                                {
-                                    showEthnicOrigin();
-                                }
-                                else
-                                {
-                                    hideEthnicOrigin();
-                                }
+								if($('[id$=ethnicOriginGroupPanel]').find('select').val() != '')
+			                    {
+			                        showEthnicOrigin();
+			                    }
+			                    else
+			                    {
+			                        hideEthnicOrigin();
+			                    }
 
-                                {!IF(readOnlyMode,
-                                    "makeEthnicOriginDisabled();$('[makeReadOnly=true]').attr('disabled', 'disabled');",
-                                    "$('[id$=EthnicOrigin]').attr('required', 'TRUE');"
-                                )}
-                            });
+			                    {!IF(readOnlyMode,
+									"makeEthnicOriginDisabled();$('[makeReadOnly=true]').attr('disabled', 'disabled');",
+									"$('[id$=EthnicOrigin]').attr('required', 'TRUE');"
+								)}
+							});
 
-                            function showEthnicOrigin()
-                            {
-                                jQuery('[id$=ethnicOriginPanel]').show();
-                            };
-                            function hideEthnicOrigin()
-                            {
-                                jQuery('[id$=ethnicOriginPanel]').hide();
-                            };
-                            function makeEthnicOriginDisabled()
-                            {
-                                count = 0;
-                                clearIntervalBoolean = false;
-                                var checkEthnicIsDisabled = setInterval
-                                (
-                                    function()
-                                    {
-                                        var ethnicOriginElement = jQuery('[id$=EthnicOrigin]');
-                                        var notReRenderedElement = jQuery('[notReRendered=true]');
-                                        var updatedEthnicOriginElement = ethnicOriginElement.prop('disabled');
+							function showEthnicOrigin()
+							{
+								jQuery('[id$=ethnicOriginPanel]').show();
+							};
+							function hideEthnicOrigin()
+							{
+								jQuery('[id$=ethnicOriginPanel]').hide();
+							};
+							function makeEthnicOriginDisabled()
+							{
+								count = 0;
+								clearIntervalBoolean = false;
+								var checkEthnicIsDisabled = setInterval
+								(
+									function()
+									{
+										var ethnicOriginElement = jQuery('[id$=EthnicOrigin]');
+										var notReRenderedElement = jQuery('[notReRendered=true]');
+										var updatedEthnicOriginElement = ethnicOriginElement.prop('disabled');
 
-                                        if(ethnicOriginElement.size() > 0 && notReRenderedElement.size() == 0)
-                                        {
-                                            if (!updatedEthnicOriginElement)
-                                            {
-                                                ethnicOriginElement.prop('disabled', 'disabled');
-                                            }
-                                            else if (updatedEthnicOriginElement)
-                                            {
-                                                clearIntervalBoolean = true;
-                                            }
-                                        }
+										if(ethnicOriginElement.size() > 0 && notReRenderedElement.size() == 0)
+										{
+											if (!updatedEthnicOriginElement)
+											{
+												ethnicOriginElement.prop('disabled', 'disabled');
+											}
+											else if (updatedEthnicOriginElement)
+											{
+												clearIntervalBoolean = true;
+											}
+										}
 
-                                        count++;
+										count++;
 
-                                        if(count > 100 || clearIntervalBoolean)
-                                        {
-                                            clearInterval(checkEthnicIsDisabled);
-                                        }
+										if(count > 100 || clearIntervalBoolean)
+										{
+											clearInterval(checkEthnicIsDisabled);
+										}
 
-                                    },
-                                    100
-                                );
-                            }
-                        </script>
-                </div>
-            </div>
-        </apex:define>
-    </apex:composition>
+									},
+									100
+								);
+							}
+						</script>
+				</div>
+			</div>
+		</apex:define>
+	</apex:composition>
 </apex:page>

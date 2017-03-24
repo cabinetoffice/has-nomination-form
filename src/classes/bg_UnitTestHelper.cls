@@ -11,14 +11,14 @@
  @isTest
  public class bg_UnitTestHelper
  {
- 	public static final String COMMUNITY_USER_PROFILE = 'Registered Nominator';
- 	public static final String DEFAULT_USER_TIMEZONE = 'America/Los_Angeles';
- 	public static final String DEFAULT_USER_LANGUAGE = 'en_US';
- 	public static final String USER_ROLE = 'HAS Office';
+    public static final String COMMUNITY_USER_PROFILE = 'Registered Nominator';
+    public static final String DEFAULT_USER_TIMEZONE = 'America/Los_Angeles';
+    public static final String DEFAULT_USER_LANGUAGE = 'en_US';
+    public static final String USER_ROLE = 'HAS Office';
     public static final String COMMUNITY_USER_ROLE = 'Manager';
     public static final String EMAIL_ENCODING_KEY = 'UTF-8';
 
-	public static User GetUser(String title, String firstName, String lastName, String email, Id profileId)
+    public static User GetUser(String title, String firstName, String lastName, String email, Id profileId)
     {
         User newUser = createUser(title, firstName, lastName, email, profileId);
 
@@ -80,7 +80,7 @@
     {
         Profile testProfile = [SELECT Id FROM Profile WHERE Name = :profileName Limit 1];
 
-   		return testProfile.Id;
+        return testProfile.Id;
     }
 
     public static Contact getContact(Id accountId, String firstName, String lastName, String eMail, Id ownerId)
@@ -228,18 +228,25 @@
     /*
         Create a test supporter record
     */
-    public static Supporter__c createSupporter(String supporterName, String knewFrom, String knewUntil, Id nominationId)
+    public static Supporter__c GetSupporter(String supporterName, String knewFrom, String knewUntil, Id nominationId)
     {
-        Supporter__c testSupporter = new Supporter__c();
-
-        testSupporter.Name = supporterName;
-        testSupporter.Knew_From__c = knewFrom;
-        testSupporter.Knew_Until__c = knewUntil;
-        testSupporter.Relationship__c = 'Friend';
-        testSupporter.Nomination_Id__c = nominationId;
+        Supporter__c testSupporter = CreateSupporter(supporterName, knewFrom, knewUntil, nominationId);
 
         insert testSupporter;
         return testSupporter;
+    }
+
+    /*
+    *   Create a test supporter in memory
+    */
+    public static Supporter__c CreateSupporter(String supporterName, String knewFrom, String knewUntil, Id nominationId)
+    {
+        Supporter__c result = CreateSupporter(supporterName, nominationId);
+        result.Knew_From__c = knewFrom;
+        result.Knew_Until__c = knewUntil;
+        result.Relationship__c = 'Friend';
+
+        return result;
     }
 
     /*

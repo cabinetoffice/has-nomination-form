@@ -1,0 +1,18 @@
+<apex:component >
+<apex:attribute name="ExtCon" type="bg_NominationBaseExtension" required="true" description="handle to the Extension controller" />
+<apex:attribute name="NomExtCon" type="bg_NominationNomineeExtension" required="true" description="handle to the Extension controller" />
+
+  	<label styleClass="form-label-bold" class="block-label {!if(NomExtCon.isBritish[0].Value == ExtCon.nominee.is_British__c, 'selected', '')}" for="isBritishSelected" style="display: {!IF(ExtCon.readOnlyMode, 'none;','')}"> 
+        <apex:outputPanel rendered="{! !ExtCon.readOnlyMode}" styleClass="form-label-bold" >                     
+            <apex:inputCheckbox id="isBritishSelected" value="{!ExtCon.isBritishSelected}" required="{!ExtCon.isOtherSelected == False}" >{!NomExtCon.isBritish[0].Label}                     
+            </apex:inputCheckbox>                 
+        </apex:outputPanel>   
+    </label>  
+    <label styleClass="form-label-bold" class="block-label {!if(NomExtCon.isBritish[1].Value == ExtCon.nominee.is_British__c, 'selected', '')}" for="isOtherSelected" style="display: {!IF(ExtCon.readOnlyMode, 'none;','')}">             
+        <apex:outputPanel rendered="{! !ExtCon.readOnlyMode}" styleClass="form-label-bold">                     
+        	<apex:inputCheckbox id="isOtherSelected" value="{!ExtCon.isOtherSelected}" required="{!ExtCon.isBritishSelected == False}" >{!NomExtCon.isBritish[1].Label}
+            <apex:actionsupport event="onchange" rerender="otherNationality" />                    
+            </apex:inputCheckbox>                 
+        </apex:outputPanel>             
+	</label>  
+</apex:component>

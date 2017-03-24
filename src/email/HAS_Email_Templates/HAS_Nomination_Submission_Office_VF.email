@@ -1,0 +1,71 @@
+<messaging:emailTemplate subject="Review test" recipientType="User" relatedToType="Case">
+<messaging:htmlEmailBody >
+ <html>
+    <body>
+        <apex:outputPanel rendered="{!IF(ISNULL(relatedTo.Id), true , false)}">
+             <p><em>In order to see a preview use the 'Send Test and Verify Merge Fields' button to specify a case.</em></p>
+         </apex:outputPanel>
+        <apex:outputPanel rendered="{!IF(ISNULL(relatedTo.Id), false , true)}">
+             <c:HAS_OfficeEmail nominationRecord="{!relatedTo.Id}" />
+         </apex:outputPanel>
+         
+         
+    
+    
+    
+    </body>
+ </html>
+</messaging:htmlEmailBody>
+
+<messaging:attachment filename="Honours nomination web form submitted for
+{!relatedTo.Nominee_Name__c}" renderAs="PDF">
+    <c:HAS_OfficeEmail nominationRecord="{!relatedTo.Id}" />
+</messaging:attachment>
+
+<messaging:plainTextEmailBody >
+An honours nomination web form has been submitted by {!relatedTo.Nominator__c}. 
+
+This is a summary of the submission, to view the full nomination go to:&nbsp;<apex:outputtext value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}"/>
+
+NOMINATION NUMBER: {!relatedTo.CaseNumber} 
+
+NOMINEE DETAILS 
+Name: {!relatedTo.Nominee_Name__c} 
+
+THE RECOMMENDATION 
+Summary: 
+{!relatedTo.Recommendation_summary__c}
+
+Posts in which the nominee has excelled: 
+Number of posts: {!relatedTo.Number_Of_Posts_Added__c} 
+
+Benefits resulting from the nominee's service: 
+{!relatedTo.Benefits_Details__c} 
+
+Others giving similar service: {!relatedTo.Others_In_Post__c} 
+
+What makes the nominee stand out from others: 
+{!relatedTo.Standout_Details__c} 
+
+Other recognition for nominee: 
+{!relatedTo.Other_Recognition__c}
+
+SUPPORTERS 
+Number of supporters added: {!relatedTo.Number_of_Supports_Added__c} 
+
+LETTERS OF SUPPORT UPLOADED 
+Number of letters uploaded: {!relatedTo.Letters_of_Support_Uploaded__c} 
+
+NOMINATOR DETAILS 
+Nominator: {!relatedTo.Nominator__c}
+
+
+-- 
+
+{!$Organization.Name} 
+{!$Organization.Division} 
+{!$Organization.Address} 
+T: {!$Organization.Phone}
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

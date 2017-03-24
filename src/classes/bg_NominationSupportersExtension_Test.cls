@@ -51,8 +51,10 @@ private class bg_NominationSupportersExtension_Test
 			Test.setCurrentPage(HASSupporters);
 
             // Add Supporters for the testCase nomination
-            bg_UnitTestHelper.getSupporter('Driving Instructor', testCase.Id);
-            bg_UnitTestHelper.getSupporter('Haberdasher', testCase.Id);
+            List<Supporter__c> testSupporters = new List<Supporter__c>();
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Driving Instructor', testCase.Id));
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Haberdasher', testCase.Id));
+            insert testSupporters;
 
             // Get a new instance of the NominationSupporterExtension controller
             ApexPages.StandardController caseController = new ApexPages.StandardController(testCase);
@@ -172,8 +174,10 @@ private class bg_NominationSupportersExtension_Test
 			Test.setCurrentPage(HASSupporters);
 
             // Add supporters for the testCase nomination
-            bg_UnitTestHelper.getSupporter('Driving Instructor', testCase.Id);
-            bg_UnitTestHelper.getSupporter('Haberdasher', testCase.Id);
+            List<Supporter__c> testSupporters = new List<Supporter__c>();
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Driving Instructor', testCase.Id));
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Haberdasher', testCase.Id));
+            insert testSupporters;
 
             // Get a new instance of the NominationSupporterExtension controller
             ApexPages.StandardController caseController = new ApexPages.StandardController(testCase);
@@ -371,7 +375,12 @@ private class bg_NominationSupportersExtension_Test
             Insert testCase;
 
             // Add supporter for the testCase nomination
-            Supporter__c testSupporter = bg_UnitTestHelper.getSupporter('Driving Instructor',testCase.Id);
+            List<Supporter__c> testSupporters = new List<Supporter__c>();
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Driving Instructor', testCase.Id));
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Haberdasher', testCase.Id));
+            insert testSupporters;
+
+            Supporter__c testSupporter = testSupporters.get(0);
 
             // Set test custom settings for page references
             bg_UnitTestHelper.createHASPageRefSettings('Nominee Supporters', 17, 'HAS_FormPage17');
@@ -452,8 +461,13 @@ private class bg_NominationSupportersExtension_Test
             Insert testCase;
 
             // Add supporters for the testCase nomination
-            Supporter__c rec1 = bg_UnitTestHelper.getSupporter('Driving Instructor', testCase.Id);
-            Supporter__c rec2 = bg_UnitTestHelper.getSupporter('Haberdasher', testCase.Id);
+            List<Supporter__c> testSupporters = new List<Supporter__c>();
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Driving Instructor', testCase.Id));
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Haberdasher', testCase.Id));
+            insert testSupporters;
+
+            Supporter__c rec1 = testSupporters.get(0);
+            Supporter__c rec2 = testSupporters.get(1);
 
             // Set test custom settings for page references
             bg_UnitTestHelper.createHASPageRefSettings('Nominee Supporters', 17, 'HAS_FormPage17');
@@ -544,8 +558,13 @@ private class bg_NominationSupportersExtension_Test
 
 
             // Add supporters for the testCase nomination
-            Supporter__c rec1 = bg_UnitTestHelper.getSupporter('Driving Instructor', testCase.Id);
-            Supporter__c rec2 = bg_UnitTestHelper.getSupporter('Haberdasher', testCase.Id);
+            List<Supporter__c> testSupporters = new List<Supporter__c>();
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Driving Instructor', testCase.Id));
+            testSupporters.add(bg_UnitTestHelper.createSupporter('Haberdasher', testCase.Id));
+            insert testSupporters;
+
+            Supporter__c rec1 = testSupporters.get(0);
+            Supporter__c rec2 = testSupporters.get(1);
 
             // Set test custom settings for page references
             bg_UnitTestHelper.createHASPageRefSettings('Nominee Supporters', 17, 'HAS_FormPage17');

@@ -16,6 +16,8 @@ public class bg_NominationNomineeExtension extends bg_NominationBaseExtension
 		public property to get list options for the Disability picklist on the contact object
  	*/
 
+   /* ***** HANDLE TO CURRENT INSTANCE OF CONTROLLER (to be passed to rendered VF components, avoids re-instantiation of controller) ***** */
+    public bg_NominationNomineeExtension NomExtCon { get { return this; } }
    public List<SelectOption> isBritish
    {
        get

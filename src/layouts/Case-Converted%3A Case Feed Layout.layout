@@ -54,7 +54,6 @@
         <rightComponents>
             <componentType>CustomLinks</componentType>
         </rightComponents>
-        <useInlineFiltersInConsole>false</useInlineFiltersInConsole>
     </feedLayout>
     <layoutSections>
         <customLabel>true</customLabel>

@@ -117,7 +117,7 @@ public class bg_formUtils
     public static Contact getNominee(Id nomineeId)
     {
     	return 	[
-				SELECT Id, Salutation, FirstName, LastName, MailingStreet, MailingCity, MailingState, MailingCountry, MailingPostalcode, Phone, Email, Date_Of_Birth__c, Ethnic_Origin__c, Ethnic_Origin_Group__c, Disability__c, Nationality__c, Is_British__c, Post_Nominal__c, Known_As__c
+				SELECT Id, Salutation, FirstName, LastName, MailingStreet, MailingCity, MailingState, MailingCountry, MailingPostalcode, Phone, Email, Date_Of_Birth__c, Ethnic_Origin__c, Ethnic_Origin_Group__c, Disability__c, Nationality__c, Is_British__c, Post_Nominal__c, Known_As__c, Nationalities__c
 				FROM Contact
 				WHERE Id =: nomineeId
 				];
@@ -178,7 +178,7 @@ public class bg_formUtils
 	public static List<Nomination_Attachment__c> getNominationAttachments(Id submissionId, String attachmentType)
     {
     	return 	[
-				SELECT Id, Name, Attachment_Type__c
+				SELECT Id, Name, Attachment_Url__c, Attachment_Type__c
 				FROM Nomination_Attachment__c
 				WHERE Nomination__c =: submissionId AND Attachment_Type__c =: attachmentType
 				];

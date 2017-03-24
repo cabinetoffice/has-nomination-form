@@ -1,8 +1,11 @@
 <apex:component >
-    <div id="login-proposition-links">
-        <ul id="proposition-links">
-            <li><a href="{!$Label.HAS_Reset_Password_Page}">{!$Label.HAS_Change_Password_Label}</a></li>
-            <li><a href="/secur/logout.jsp" >{!$Label.HAS_Logout_Label}</a></li>
-        </ul>
-    </div>
+        <a href="#proposition-links" class="js-header-toggle menu js-hidden">
+          menu
+        </a>
+        <nav id="proposition-menu">
+            <ul id="proposition-links">
+                <li><a href="{!$Label.HAS_Reset_Password_Page}">{!$Label.HAS_Change_Password_Label}</a></li>
+                <li><a href="/secur/logout.jsp" >{!$Label.HAS_Logout_Label}</a></li>
+            </ul>
+        </nav>
 </apex:component>

@@ -41,6 +41,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -368,10 +372,6 @@
                 <controllingFieldValues>Mixed ethnic background</controllingFieldValues>
             </picklistValues>
             <picklistValues>
-                <fullName>Black British</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
                 <fullName>Black Caribbean and white</fullName>
                 <default>false</default>
                 <controllingFieldValues>Mixed ethnic background</controllingFieldValues>
@@ -497,6 +497,15 @@
     <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Nationalities__c</fullName>
+        <externalId>false</externalId>
+        <label>Nationalities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
     </fields>
     <fields>
         <fullName>Nationality__c</fullName>

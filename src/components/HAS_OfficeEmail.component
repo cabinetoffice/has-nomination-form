@@ -1,0 +1,515 @@
+<apex:component controller="bg_HAS_OfficeEmailController" access="global">
+
+    <apex:attribute name="nominationRecord" description="Case record for email content" type="Id" assignTo="{!NominationId}"  />
+
+    <apex:outputPanel layout="block" style="color: #222 !important; width:90%; margin:20px auto; font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;">
+        <apex:outputPanel layout="block" id="content" styleClass="home">
+
+            <h1 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 22px;line-height: 1.25;font-weight: bold;text-transform: none; margin-top: 0; margin-bottom: 1.25em;">
+                You have a new nomination submission
+            </h1>
+
+            <!-- Dynamically generated email content begins -->
+            <div style="margin-bottom:5em;">
+                <h2 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 22px;line-height: 1.25;font-weight: bold;text-transform: none; margin-top: 0; margin-bottom: 10px;">
+                    Nominator details
+                </h2>
+
+                <table id="nominatorNameTable" style="border-collapse: collapse;
+                border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Salutation.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.FirstName.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.LastName.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Salutation}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.FirstName}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.LastName}
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="nominatorAddressTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingStreet.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingCity.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingState.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingCountry.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingPostalcode.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.MailingStreet}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.MailingCity}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.MailingState}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.MailingCountry}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.MailingPostalcode}
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="nominatorContactTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Email.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Phone.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Email}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Phone}
+                        </td>
+                    </tr>
+                </table>
+
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" />
+                </h3>
+                <table id="nominatorContactTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Disability__c.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Disability__c}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Ethnic_Origin__c}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominator.Ethnic_Origin_Group__c}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="margin-bottom:5em;">
+                <h2 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 22px;line-height: 1.25;font-weight: bold;text-transform: none; margin-top: 0; margin-bottom: 10px;">
+                    Nominee details
+                </h2>
+
+                <table id="nominatorNameTable" style="border-collapse: collapse;
+                border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Salutation.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.FirstName.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.LastName.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.Salutation}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.FirstName}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.LastName}
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="nominatorAddressTable" style="border-collapse: collapse;
+                border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingStreet.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingCity.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingState.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingCountry.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.MailingPostalcode.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.MailingStreet}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.MailingCity}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.MailingState}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.MailingCountry}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.MailingPostalcode}
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="nominatorContactTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Email.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Contact.Fields.Phone.Label}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.Email}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!Nominee.Phone}
+                        </td>
+                    </tr>
+                </table>
+
+
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_7_Title}" />
+                </h3>
+
+                <apex:outputPanel layout="block">
+                    <p style="font-size:14px;"><apex:outputText value="{!Nominee.Date_of_Birth__c}" id="Birthdate"  /></p>
+                </apex:outputPanel>
+
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Nominee_Nationality}" />
+                </h3>
+
+                <apex:outputPanel layout="block">
+                    <p style="font-size:14px;"><apex:outputText value="{!Nominee.Nationality__c}, " id="Nationality"  /><apex:outputText value="{!Nominee.Nationalities__c}" id="Nationalities"  /></p>
+                </apex:outputPanel>
+
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_9_Title}" />
+                </h3>
+
+                 <apex:outputPanel layout="block">
+                    <p style="font-size:14px;">
+                        <apex:outputText value="{!Nomination.Relationship_Nominator_to_Nominee__c}" id="relationship"  />
+                    </p>
+                 </apex:outputPanel>
+
+                 <div style="margin-bottom:1.25em">
+                    <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;"><apex:outputText value="{!$Label.HAS_Form_Page_20_Title}" /></h3>
+
+                    <table id="nominatorContactTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                        <tr>
+                            <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!$ObjectType.Contact.Fields.Disability__c.Label}
+                            </th>
+                            <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!$ObjectType.Contact.Fields.Ethnic_Origin__c.Label}
+                            </th>
+                            <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!$ObjectType.Contact.Fields.Ethnic_Origin_Group__c.Label}
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!Nominator.Disability__c}
+                            </td>
+                            <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!Nominator.Ethnic_Origin__c}
+                            </td>
+                            <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                            text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                                {!Nominator.Ethnic_Origin_Group__c}
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <div style="margin-bottom:5em;">
+            <h2 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 22px;line-height: 1.25;font-weight: bold;text-transform: none; margin-top: 0; margin-bottom: 10px;">
+                Nomination details
+            </h2>
+
+            <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;"><apex:outputText value="{!$Label.HAS_Form_Page_10_Title}" /></h3>
+
+            <apex:outputPanel style="margin-bottom:1.25em" layout="block">
+                <p><apex:outputText value="{!Nomination.Recommendation_summary__c}"  /></p>
+            </apex:outputPanel>
+
+            <div style="margin-bottom:1.25em">
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_11_Title}" />
+                </h3>
+
+                <table  id="postsTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Post__c.Fields.Name.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Post__c.Fields.Start_Date_End_Date__c.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Post__c.Fields.Position_Status__c.Label}
+                        </th>
+                    </tr>
+                    <apex:repeat value="{!posts}" var="post">
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!post.Name}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!post.Start_Date_End_Date__c}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!post.Position_Status__c}
+                        </td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+            </div>
+
+            <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                <apex:outputText value="{!$Label.HAS_Form_Page_12_Title}" />
+            </h3>
+
+            <apex:outputPanel style="margin-bottom:1.25em" layout="block">
+                <p><apex:outputText value="{!Nomination.Benefits_Details__c}"   /></p>
+            </apex:outputPanel>
+
+            <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                <apex:outputText value="{!$Label.HAS_Form_Page_13_Title}" />
+            </h3>
+
+            <apex:outputPanel id="standoutDetailsPanel">
+                <p style="font-size:14px;">
+                    <apex:outputText value="{!Nomination.Others_In_Post__c}" />
+                </p>
+
+                <apex:outputPanel style="margin-bottom:1.25em" layout="block" rendered="{!Nomination.Others_In_Post__c = 'Yes'}">
+                    <apex:outputPanel layout="block" styleClass="panel-indent">
+                        <p style="font-size:14px;">
+                            <apex:outputText value="{!Nomination.Standout_Details__c}"   />
+                        </p>
+                     </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+
+            <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;"><apex:outputText value="{!$Label.HAS_Form_Page_14_Title}" /></h3>
+
+            <apex:outputPanel style="margin-bottom:1.25em" layout="block">
+                <p style="font-size:14px;">
+                    <apex:outputText value="{!Nomination.Other_Recognition__c}"  />
+                </p>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!!evidenceAttachments.empty}" id="evidenceAttachmentList" >
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_15_Title}" />
+                </h3>
+
+                <table  id="letterTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.Nomination_Attachment__c.Fields.Name.Label}
+                        </th>
+                    </tr>
+                    <apex:repeat value="{!evidenceAttachments}" var="evidence">
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!evidence.Name}
+                        </td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+            </apex:outputPanel>
+
+            <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                <apex:outputText value="{!$Label.HAS_Form_Page_17_Title}" />
+            </h3>
+
+            <apex:outputPanel id="supporterList" style="margin-bottom:1.25em">
+                <table id="supportersTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.supporter__c.Fields.Name.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.supporter__c.Fields.Knew_From_Knew_Until__c.Label}
+                        </th>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!$ObjectType.supporter__c.Fields.Relationship__c.Label}
+                        </th>
+                    </tr>
+                    <apex:repeat value="{!supporters}" var="supporter">
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!supporter.Name}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!supporter.Knew_From_Knew_Until__c}
+                        </td>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!supporter.Relationship__c}
+                        </td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!!letterAttachments.empty}" id="letterAttachmentList" >
+                <h3 style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 19px;line-height: 1.3157894737;font-weight: bold;text-transform: none;margin-top: 0.625em;margin-bottom: 0.3125em;margin-top: 1.05263em;">
+                    <apex:outputText value="{!$Label.HAS_Form_Page_18_Title}" />
+                </h3>
+
+                <table  id="letterTable" style="border-collapse: collapse;border-spacing: 0;margin-bottom: 1.25em;width: 100%;">
+                    <tr>
+                        <th style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: bold;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            Attachment name
+                        </th>
+                    </tr>
+                    <apex:repeat value="{!letterAttachments}" var="letter">
+                    <tr>
+                        <td style="font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, sans-serif;font-size: 14px;line-height: 1.25;font-weight: normal;
+                        text-transform: none;padding: 0.75em 1.25em 0.5625em 0;text-align: left;color: #0b0c0c;border-bottom: 1px solid #bfc1c3;">
+                            {!letter.Name}
+                        </td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+                <!-- LG CN29060 changed ouotput link as temporary fix as Production Nominations were not directing correctly due to custom domain -->
+                <!-- {!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+Nomination.Id}  -->
+                <p>
+                    <apex:outputlink value="{!LEFT($Api.Enterprise_Server_URL_360,FIND('.com',$Api.Enterprise_Server_URL_360)+4)+Nomination.Id}">View full details</apex:outputlink>
+                </p>
+
+                <p>
+                    --
+
+                    {!$Organization.Name}
+                    {!$Organization.Division}
+                    {!$Organization.Address}
+                    T: {!$Organization.Phone}
+                </p>
+
+            </apex:outputPanel>
+        </div>
+        <!-- dynamic email content ends -->
+    </apex:outputPanel>
+</apex:outputPanel>
+
+</apex:component>

@@ -25,6 +25,8 @@
         </apex:define>
 
         <apex:define name="mainContent">
+		<div class="grid-row">
+			<div class="column-two-thirds">
             <apex:outputPanel layout="block" styleClass="inner">
                 <apex:outputPanel layout="block" id="content" styleClass="home">
                     <apex:form styleClass="main">
@@ -64,6 +66,8 @@
                     $("[makeReadOnly='true']").attr('disabled', 'disabled');
                 });
             </script>
+		</div>
+		</div>
         </apex:define>
 
     </apex:composition>
